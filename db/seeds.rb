@@ -9,21 +9,23 @@
 #create users
 khaleda = User.create(first_name: "Khaleda", last_name: "Khan", username: "KingKhan", email: "khaleda.khan87@gmail.com", password: "hello")
 ece = User.create(first_name: "Ece", last_name: "Ozalp", username: "A3", password: "123")
-andrew = User.create(first_name: "Andrew", last_name: "Klein", username: "quarthex", email: "andrew.klein.j@gmail.com" password: "123")
+andrew = User.create(first_name: "Andrew", last_name: "Klein", username: "quarthex", email: "andrew.klein.j@gmail.com", password: "123")
 logan = User.create(first_name: "Logan", last_name: "Gants", username: "logants", password: "123")
 
 #create prompts
-kprompt = Prompt.create(content: "What is your favorite color?", current: true)
+khaleda.decrees.create(content: "What is your favorite color?", current: true)
 Prompt.create(content: "If you could have any superpower, what would it be?")
-Prompt.create(content: "blah")
+Prompt.create(content: "What's your best pickup line?")
+Prompt.create(content: "What would you do if you knew you couldn't fail?")
 
-kprompt.king = khaleda
-kprompt.save
+#prompt.king = khaleda
+#kprompt.save
 
-e_response = ece.responses.create(content:"blue")
-l_response = logan.responses.create(content:"green")
-a_response = andrew.responses.create(content:"orange")
+e_response = ece.responses.create(content:"Blue")
+l_response = logan.responses.create(content:"Green")
+a_response = andrew.responses.create(content:"Orange")
 
-kprompt.responses << e_response
-kprompt.responses << l_response
-kprompt.responses << a_response
+current_prompt = Prompt.current
+current_prompt.responses << [e_response, l_response, a_response]
+# kprompt.responses << l_response
+# kprompt.responses << a_response

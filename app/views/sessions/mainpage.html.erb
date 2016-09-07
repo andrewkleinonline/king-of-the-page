@@ -1,7 +1,6 @@
-
-
 <h1><%= @current_prompt.content %> by <%= @current_prompt.king.username %><br>
-current_user <%= current_user.username%><br>
+current_user: <%= current_user.username%><br>
+<hr>
 <%= render @current_prompt.responses %></h1>
 
 <%= form_for @response do |f|%>
