@@ -21,6 +21,7 @@ class SessionsController < ApplicationController
   end
   def mainpage
     @current_prompt = Prompt.find_by(current: true)
+    @response = Response.new
   end
 
 end
