@@ -16,4 +16,10 @@ logan = User.create(username: "Log", password: "an")
 kprompt.king = khaleda
 kprompt.save
 
-eresponse = Response.create()
+e_response = ece.responses.create(content:"blue")
+l_response = logan.responses.create(content:"green")
+a_response = andrew.responses.create(content:"orange")
+
+kprompt.responses << e_response
+kprompt.responses << l_response
+kprompt.responses << a_response
