@@ -8,8 +8,8 @@ class SessionsController < ApplicationController
     user = User.find_by(username: params[:user][:username])
     # if user is found (i.e. not nil) and user can be authenticated with bcrypt
     if user && user.authenticate(params[:user][:password])
-      session[:user] = user.id
-      redirect_to user_path(user)
+      session[:user_id] = user.id
+      redirect_to root_path
     else
       redirect_to new_session_path
     end
@@ -18,6 +18,9 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     redirect_to root_path
+  end
+  def mainpage
+    @current_prompt = Prompt.find_by(current: true)
   end
 
 end
