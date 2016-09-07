@@ -15,15 +15,44 @@ ActiveRecord::Schema.define(version: 20160906220251) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "prompts", force: :cascade do |t|
+    t.integer "user_id"
+    t.string  "content"
+  end
+
+  create_table "responses", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "prompt_id"
+    t.string  "content"
+  end
+
   create_table "users", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_nam"
     t.string   "username"
+    t.string   "email"
     t.string   "password_digest"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.integer  "points",              default: 0
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.string   "votable_type"
+    t.integer  "votable_id"
+    t.string   "voter_type"
+    t.integer  "voter_id"
+    t.boolean  "vote_flag"
+    t.string   "vote_scope"
+    t.integer  "vote_weight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope", using: :btree
+    t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
   end
 
 end

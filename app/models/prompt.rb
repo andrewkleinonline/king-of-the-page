@@ -1,4 +1,4 @@
-class Response < ActiveRecord::Base
-belongs_to :user
+class Response < ApplicationRecord
+  belongs_to :user
 
 end

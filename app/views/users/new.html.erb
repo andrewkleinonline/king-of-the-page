@@ -1,10 +1,18 @@
 <h1>Users#new</h1>
 <p>Find me in app/views/users/new.html.erb</p>
 <%= form_for @user, url: users_path, html: { multipart: true } do |form| %>
+  <%= form.label :first_name %>
+  <%= form.text_field :first_name %>
+  <%= form.label :last_name %>
+  <%= form.text_field :last_name %>
   <%= form.label :username %>
   <%= form.text_field :username %>
+  <%= form.label :email %>
+  <%= form.text_field :email %>
   <%= form.label :password %>
-  <%= form.password_field :password_digest %>
+  <%= form.password_field :password %>
+  <%= form.label :password_confirmation %>
+  <%= form.password_field :password_confirmation %>
   <%= form.file_field :avatar %>
   <%= form.submit %>
 <% end %>
