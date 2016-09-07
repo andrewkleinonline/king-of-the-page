@@ -6,12 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-khaleda = User.create(username: "KingKhan", password: "hello")
-kprompt = Prompt.create(content:"Fav color?", current: true)
+#create users
+khaleda = User.create(first_name: "Khaleda", last_name: "Khan", username: "KingKhan", email: "khaleda.khan87@gmail.com", password: "hello")
+ece = User.create(first_name: "Ece", last_name: "Ozalp", username: "A3", password: "123")
+andrew = User.create(first_name: "Andrew", last_name: "Klein", username: "quarthex", email: "andrew.klein.j@gmail.com" password: "123")
+logan = User.create(first_name: "Logan", last_name: "Gants", username: "logants", password: "123")
 
-ece = User.create(username: "Aye Jay", password: "123")
-andrew = User.create(username: "Androus", password: "123")
-logan = User.create(username: "Log", password: "an")
+#create prompts
+kprompt = Prompt.create(content: "What is your favorite color?", current: true)
+Prompt.create(content: "If you could have any superpower, what would it be?")
+Prompt.create(content: "blah")
 
 kprompt.king = khaleda
 kprompt.save
