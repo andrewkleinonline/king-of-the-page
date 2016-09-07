@@ -1,11 +1,17 @@
-<h1><%= @current_prompt.content %> by <%= @current_prompt.king.username %><br>
-current_user: <%= current_user.username%><br>
-<hr>
-<%= render @current_prompt.responses %></h1>
+You are logged in as: <%= current_user.full_name%><br>
 
-<%= form_for @response do |f|%>
-  <%= f.hidden_field :subject_id,value: current_user.id %>
-  <%= f.hidden_field :prompt_id,value: @current_prompt.id %>
-  <%= f.text_area :content %>
-  <%= f.submit %>
-<%end  %>
+<div class="">
+  <h3>TODAY'S PROMPT, AS DECREED BY KING <%= @current_prompt.king.last_name.upcase %>:</h3>
+  <div class="prompt">
+    <h2><%= @current_prompt.content %></h2>
+  </div>
+  <hr>
+  <%= render @current_prompt.responses %>
+
+  <%= form_for @response do |f|%>
+    <%= f.hidden_field :subject_id,value: current_user.id %>
+    <%= f.hidden_field :prompt_id,value: @current_prompt.id %>
+    <%= f.text_area :content %>
+    <%= f.submit %>
+  <% end %>
+</div>
