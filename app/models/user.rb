@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :prompts, :foreign_key => 'king_id'
-  has_many :responses, :foreign_key => 'king_id', through: :prompts
+  has_many :decrees, :foreign_key => 'king_id', :class_name => "Prompt"
+  # has_many :responses, :foreign_key => 'king_id', through: :prompts
   has_many :responses, :foreign_key => 'subject_id'
   has_many :prompts, :foreign_key => 'subject_id', through: :responses
 
