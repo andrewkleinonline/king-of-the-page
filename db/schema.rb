@@ -16,19 +16,22 @@ ActiveRecord::Schema.define(version: 20160906220251) do
   enable_extension "plpgsql"
 
   create_table "prompts", force: :cascade do |t|
-    t.integer "user_id"
     t.string  "content"
+    t.integer "king_id"
+    t.index ["king_id"], name: "index_prompts_on_king_id", using: :btree
   end
 
   create_table "responses", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer "subject_id"
     t.integer "prompt_id"
     t.string  "content"
+    t.index ["prompt_id"], name: "index_responses_on_prompt_id", using: :btree
+    t.index ["subject_id"], name: "index_responses_on_subject_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
-    t.string   "last_nam"
+    t.string   "last_name"
     t.string   "username"
     t.string   "email"
     t.string   "password_digest"
