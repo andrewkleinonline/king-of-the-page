@@ -2,4 +2,16 @@
 <p>Find me in app/views/users/show.html.erb</p>
 
 <%= image_tag @user.avatar.url(:medium) %>
-<%= @user.name %>
+<%= @user.username %>
+
+
+
+My decrees:<br>
+<%= @user.prompts.each do |prompts| %>
+<%= response.content %>
+<% end  %>
+
+My responses:<br>
+<%= @user.responses.each do |response| %>
+<%= response.content %>
+<% end  %>
