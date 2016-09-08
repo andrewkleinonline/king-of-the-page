@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #create users
-khaleda = User.create(first_name: "Khaleda", last_name: "Khan", email: "khaleda.khan87@gmail.com")
+khaleda = User.create(first_name: "Khaleda", last_name: "Khan", email: "khaleda.khan87@gmail.com", profile_picture_url: "https://pbs.twimg.com/profile_images/447374371917922304/P4BzupWu.jpeg")
 ece = User.create(first_name: "Ece", last_name: "Ozalp")
-andrew = User.create(first_name: "Andrew", last_name: "Klein", email: "andrew.klein.j@gmail.com")
+andrew = User.create(first_name: "Robert", last_name: "Zartop", email: "rztop@gmail.com", profile_picture_url: "https://thumbs.dreamstime.com/x/silly-man-5895642.jpg")
 logan = User.create(first_name: "Logan", last_name: "Gants", email: "lgants@gmail.com")
 
 #create prompts
