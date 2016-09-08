@@ -12,6 +12,9 @@ class ResponsesController < ApplicationController
     @response = Response.new(response_params)
     if @response.save
       redirect_to root_path
+    else
+      flash.now[:notice] = "Response can not be saved"
+      render :new
     end
     # @response.king = current_user
     # redirect_to response_path(@response)
