@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :prompts
-  resources :sessions, only: [:new]
+  resources :sessions, only: [:new, :destroy]
   resources :responses
   resources :main
 
