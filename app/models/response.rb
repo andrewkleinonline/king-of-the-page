@@ -17,16 +17,17 @@ class Response < ApplicationRecord
 
   def upvote_class(user)
     if user_voted?(user)
-      "<pre><code> &#128077; </code></pre>".html_safe
+       "<pre><code> &#128077; </code></pre>".html_safe 
     else
-      "<pre><code> &#9994; </code></pre>".html_safe
+       "<pre><code> &#9994; </code></pre>".html_safe
     end
   end
 
-  private
   def user_voted?(user)
     self.votes.where(subject: user).any?
   end
+
+   private
 
   def vote(user)
     self.votes.create(subject_id: user.id)
