@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :sessions
   resources :responses
 
+  post '/response/:id/vote' => 'responses#vote', as: :vote
+
 end

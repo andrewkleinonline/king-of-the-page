@@ -6,7 +6,13 @@ You are logged in as: <%= current_user.full_name%><br>
     <h2><%= @current_prompt.content %></h2>
   </div>
   <hr>
+
   <%= render @current_prompt.responses %>
+
+
+
+
+
 
   <%= form_for @response do |f|%>
     <%= f.hidden_field :subject_id,value: current_user.id %>
