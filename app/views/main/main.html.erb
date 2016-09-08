@@ -38,8 +38,6 @@
     </div>
 </div>
 
-
-
 <div class="container">
     <div class="panel panel-default">
       <div class="panel-body">
@@ -47,8 +45,12 @@
           <%= form_for @response do |f|%>
             <%= f.hidden_field :subject_id, value: current_user.id %>
             <%= f.hidden_field :prompt_id, value: @current_prompt.id %>
-            <%= f.text_area :content %>
-            <%= f.submit %>
+            <div class="field">
+              <%= f.text_field :content, class: "form-control", placeholder: "Enter your response here" %>
+            </div>
+            <div class="actions">
+              <%= f.submit "Respond", class: "btn btn-primary btn-sm" %>
+            </div>
           <% end %>
         <% end %>
       </div>
