@@ -1,5 +1,16 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
 
-<%= image_tag @user.avatar.url(:medium) %>
-<%= @user.name %>
+<%= image_tag @user.avatar.url(:medium) %><br><br>
+<%= @user.username %><br>
+
+
+
+My decrees:<br>
+<% @user.decrees.each do |decree| %>
+<%= decree.content %>
+<% end  %><br>
+
+My responses:<br>
+<% @user.responses.each do |response| %>
+Decree of the Day: <br><%= Prompt.find(response.prompt_id).content %><br>
+My Response: <br><%= response.content %>
+<% end  %>
