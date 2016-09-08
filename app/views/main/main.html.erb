@@ -1,13 +1,14 @@
-You are logged in as: <%= current_user.full_name%><br>
 
-<div class="">
-  <h3>TODAY'S PROMPT, AS DECREED BY KING <%= @current_prompt.king.last_name.upcase %>:</h3>
+<div class="panel panel-default">
+  <div class="panel-body">
+
+  <h3>The King hath decreed that the prompt is: <%= @current_prompt.king.last_name.upcase %>:</h3>
   <div class="prompt">
-    <h2><%= @current_prompt.content %></h2>
+    <strong><h2><%= @current_prompt.content %></h2></strong>
   </div>
   <hr>
-  <%= render @current_prompt.responses %>
-
+  <div class="panel panel-default">
+    <div class="panel-body">
   <% if current_user != @current_prompt.king %>
     <%= form_for @response do |f|%>
       <%= f.hidden_field :subject_id, value: current_user.id %>
@@ -16,4 +17,9 @@ You are logged in as: <%= current_user.full_name%><br>
       <%= f.submit %>
     <% end %>
   <% end %>
+</div>
+</div>
+
+  <%= render @current_prompt.responses %>
+  </div>
 </div>
