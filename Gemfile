@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'omniauth-facebook'
 
+gem 'figaro'
+
 gem 'bcrypt', '~> 3.1.7'
 # Acts as votable gem
 gem 'acts_as_votable', '~> 0.10.0'
