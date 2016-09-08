@@ -17,11 +17,30 @@
 @font-face { font-family: "ErlerDingbats"; src: font-url('ErlerDingbats.ttf'); };
 @font-face { font-family: "sosa-regular-webfront"; src: font-url('sosa-regular-webfont.ttf'); };
 
-
 .icons_1 {
   font-family: 'ErlerDingbats';
 }
 
 .icons_2 {
   font-family: 'sosa-regular-webfont';
+}
+
+
+@media screen and (min-width: 47.5em ) {
+
+  .columns-container {
+      float: left;
+      margin: 0 auto;
+  }
+
+  .left-column {
+    margin-right: 20em;
+    float: left;
+  }
+
+  .right-column {
+    width: 18.75em;
+    margin-left: -19.3em;
+    float: left;
+  }
 }

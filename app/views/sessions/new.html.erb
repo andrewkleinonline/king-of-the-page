@@ -1,10 +1,21 @@
-<h1>I went to Istanbul</h1>
 <h1> Sign In </h1>
 
-<%= form_for @user, :url => url_for(:controller => 'sessions', :action => 'create') do |f|%>
-<%= f.label :username %>
-<%= f.text_field :username %>
-<%= f.label :password %>
-<%= f.password_field :password %>
-<%= f.submit "Sign In"%>
-<% end %>
+<%#= form_for @user, :url => url_for(:controller => 'sessions', :action => 'create') do |f|%>
+<%#= f.label :username %>
+<%#= f.text_field :username %>
+<%#= f.label :password %>
+<%#= f.password_field :password %>
+<%#= f.submit "Sign In"%>
+<%# end %>
+
+ <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+<!-- <button onClick="login()">log in with FB</button>
+
+<div id="status">
+</div> -->
