@@ -4,12 +4,16 @@ Rails.application.routes.draw do
 
   # root 'sessions#new'
   root 'main#main'
-  
+
   resources :users
   resources :prompts
-  resources :sessions
+  resources :sessions, only: [:new]
   resources :responses
 
   post '/response/:id/vote' => 'responses#vote', as: :vote
+
+  match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
+  match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
 end
