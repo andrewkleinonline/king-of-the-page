@@ -27,5 +27,6 @@ a_response = andrew.responses.create(content:"Orange")
 
 current_prompt = Prompt.current
 current_prompt.responses << [e_response, l_response, a_response]
+
 # kprompt.responses << l_response
 # kprompt.responses << a_response
