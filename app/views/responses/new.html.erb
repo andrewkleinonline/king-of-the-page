@@ -1,0 +1,8 @@
+<div>
+  <h2> Form to create new response  </h2>
+  <%= form_for @response do |f| %>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  <%= f.submit %>
+  <% end %>
+</div>
