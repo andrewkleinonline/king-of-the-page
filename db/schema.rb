@@ -33,16 +33,12 @@ ActiveRecord::Schema.define(version: 20160908135949) do
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "username"
     t.string   "email"
-    t.string   "password_digest"
+    t.string   "profile_picture_url"
+    t.string   "facebook_user_id"
     t.integer  "points",              default: 0
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
   end
 
   create_table "votes", force: :cascade do |t|

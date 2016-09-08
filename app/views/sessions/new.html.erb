@@ -1,14 +1,14 @@
 <h1> Sign In </h1>
 
-<%= form_for @user, :url => url_for(:controller => 'sessions', :action => 'create') do |f|%>
-<%= f.label :username %>
-<%= f.text_field :username %>
-<%= f.label :password %>
-<%= f.password_field :password %>
-<%= f.submit "Sign In"%>
-<% end %>
+<%#= form_for @user, :url => url_for(:controller => 'sessions', :action => 'create') do |f|%>
+<%#= f.label :username %>
+<%#= f.text_field :username %>
+<%#= f.label :password %>
+<%#= f.password_field :password %>
+<%#= f.submit "Sign In"%>
+<%# end %>
 
-
+ <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
 <!--
   Below we include the Login Button social plugin. This button uses
   the JavaScript SDK to present a graphical Login button that triggers
@@ -19,9 +19,3 @@
 
 <div id="status">
 </div> -->
-
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-
-<div id="status">
-</div>

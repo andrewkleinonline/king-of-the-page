@@ -11,6 +11,7 @@ My decrees:<br>
 
 My responses:<br>
 <% @user.responses.each do |response| %>
-Decree of the Day: <br><%= Prompt.find(response.prompt_id).content %><br>
+Decree of the Day: <br><%= response.prompt.content
+ %><br>
 My Response: <br><%= response.content %>
 <% end  %>

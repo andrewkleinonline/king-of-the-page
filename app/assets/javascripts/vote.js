@@ -1,10 +1,7 @@
 
 $(document).ready(function () {
-
   voteAjaxSuccessListener()
-
 })
-
 
   function voteAjaxSuccessListener () {
 
@@ -14,5 +11,4 @@ $(document).ready(function () {
       $("[x_id=" + response.response_id + "] span").html(response.votes_message)
       
     })
-  
   }
