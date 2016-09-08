@@ -5,9 +5,11 @@ class SessionsController < ApplicationController
   end
 
   def create
+
     user = User.find_by(username: params[:user][:username])
     # if user is found (i.e. not nil) and user can be authenticated with bcrypt
     if user && user.authenticate(params[:user][:password])
+
       session[:user_id] = user.id
       redirect_to root_path
     else
