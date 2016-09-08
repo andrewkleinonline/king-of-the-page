@@ -1,25 +1,63 @@
 
-<div class="panel panel-default">
-  <div class="panel-body">
+<div class="container">
+    <div class="panel panel-default">
+        <div class="row">
+            <!-- left side -->
+            <div class="col-lg-5 col-md-5 col-sm-5">
+                <!-- <div class="panel panel-default"> -->
+                    <div class="panel-body">
+                      <h3>The King hath decreed that the prompt is: <%= @current_prompt.king.last_name.upcase %>:</h3>
+                      <div class="prompt">
+                        <strong><h2><%= @current_prompt.content %></h2></strong>
+                      </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+            <!-- right side -->
+            <div class="col-lg-7 col-md-7 col-sm-7">
+                <div class="panel-body">
+                    <div class="thumbnail">
+                      <img src="..." alt="...">
+                      <div class="caption">
+                        <h3>Thumbnail label</h3>
+                        <p>...</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<center>
+  <a href="/" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true" style="width: 41%">Respond to Ye King</a>
+  <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true" style="width: 41%">Overthrow Ye King</a>
+</center>
 
-  <h3>The King hath decreed that the prompt is: <%= @current_prompt.king.last_name.upcase %>:</h3>
-  <div class="prompt">
-    <strong><h2><%= @current_prompt.content %></h2></strong>
-  </div>
-  <hr>
-  <div class="panel panel-default">
-    <div class="panel-body">
-  <% if current_user != @current_prompt.king %>
-    <%= form_for @response do |f|%>
-      <%= f.hidden_field :subject_id, value: current_user.id %>
-      <%= f.hidden_field :prompt_id, value: @current_prompt.id %>
-      <%= f.text_area :content %>
-      <%= f.submit %>
-    <% end %>
-  <% end %>
-</div>
+
+<div class="container">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <% if current_user != @current_prompt.king %>
+          <%= form_for @response do |f|%>
+            <%= f.hidden_field :subject_id, value: current_user.id %>
+            <%= f.hidden_field :prompt_id, value: @current_prompt.id %>
+            <%= f.text_area :content %>
+            <%= f.submit %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
 </div>
 
-  <%= render @current_prompt.responses %>
+
+<% @current_prompt.responses.each do |response| %>
+  <div class="container">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <%= response.content %>
+          posted by: <%= response.subject.username %>
+        </div>
+      </div>
   </div>
-</div>
+<% end %>
