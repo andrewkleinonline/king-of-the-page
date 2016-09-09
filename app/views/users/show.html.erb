@@ -1,17 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-<%= image_tag @user.avatar.url(:medium) %><br><br>
-<%= @user.username %><br>
+
+
+<div class="container"
+<br><br> 
+<img src="<%=@user.profile_picture_url%>" class="pull-right" height="200" width="200">
+<br><br><br>
+<h2> <%= @user.first_name %> has been &#9813; &#9812; KING &#9812; &#9813; <%= @user.decrees.size%> times! </h2>
+</div>
 
 
 
-My decrees:<br>
-<% @user.decrees.each do |decree| %>
-<%= decree.content %>
-<% end  %><br>
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span-5">
 
-My responses:<br>
-<% @user.responses.each do |response| %>
-Decree of the Day: <br><%= response.prompt.content
- %><br>
-My Response: <br><%= response.content %>
-<% end  %>
+
+  <h3><%= @user.first_name %>'s past decrees: </h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr>
+    <% @user.decrees.each do |d| %>
+       <td><%= link_to d.content, prompt_path(d) %></td>
+    <% end %>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="span-5">
+
+  <h3><%= @user.first_name %>'s past responses: </h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Decree</th>
+        <th>Response</th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr>
+    <% @user.responses.each do |r| %>
+       <td><%= r.prompt.content %></td>
+       <td><%= r.content %></td>
+
+    <% end %>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+
+
+
+</div>
+</div>
+
+</body>
+</html>
+

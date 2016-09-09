@@ -35,4 +35,9 @@ class User < ApplicationRecord
   def mail_new_king
     KingMailer.king_email(self).deliver
   end
+
+  def show
+    @user = user
+  end
+
 end
