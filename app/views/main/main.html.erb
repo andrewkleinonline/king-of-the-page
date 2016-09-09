@@ -65,6 +65,18 @@
           <%= response.content %>
           posted by: <%= response.subject.full_name %>
         </div>
+        <div class="vote">
+
+<%= link_to vote_path(id: response.id), method: :post, remote: true, id: "vote_link" do %>
+              <div class="like-btn text-center" response_id="<%= response.id %>">
+               <span class=<%= response.upvote_class(current_user) %> </span>
+              </div>
+            <% end %>
+            <div class="votes-message" x_id="<%= response.id %>"> <span class=<%= response.votes_message(current_user) %></span></div>
+          </div>
       </div>
   </div>
 <% end %>
+
+
+
