@@ -4,7 +4,11 @@ class PromptsController < ApplicationController
   end
 
   def new
-    @prompt = Prompt.new
+    if current_user.king
+      @prompt = Prompt.new
+    else
+      redirect_to root_path
+    end
   end
 
   def create

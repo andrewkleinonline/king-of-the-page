@@ -9,7 +9,8 @@
     <h1>Or should I say KING <%= @user.last_name.upcase %>?</h1>
 
     <p>
-      Link to new prompt form here.
+      Go to: localhost:3000/prompts/new
+      <%= link_to "Make your new decree here!", "localhost:3000/prompts/new" %>
     </p>
 
   </body>
