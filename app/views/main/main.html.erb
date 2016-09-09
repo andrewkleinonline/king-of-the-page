@@ -8,7 +8,7 @@
                     <div class="panel-body">
                       <h3>The King hath decreed that the prompt is:</h3>
                       <div class="prompt">
-                        <%if @current_prompt.pending == false%>
+                        <%if !@current_prompt.pending%>
                           <strong><h2><%= @current_prompt.content %></h2></strong>
                           <%= image_tag @current_prompt.image.url(:medium) %>
                         <% end %>
