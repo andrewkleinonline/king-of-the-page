@@ -18,45 +18,81 @@
             <div class="col-lg-5 col-md-5 col-sm-5">
                 <div class="panel-body">
                     <div class="thumbnail">
-                      <img src=<%= @current_prompt.king.profile_picture_url %> alt="...">
+                      <img src="..."  alt="...">
                       <div class="caption">
 
                         <h3>King <%= @current_prompt.king.full_name %></h3>
-                        <p>...</p>
-                        <p><center><a href="#" class="btn btn-primary" role="button">Button</a></center></p>
+                        <p>Rank: TBD</p>
+                        <p>Points: TBD</p>
+                        <p><center><a href="/users/<% @current_prompt.king.id %>" class="btn btn-primary" role="button">Profile</a></center></p>
                       </div>
                     </div>
                 </div>
             </div>
-            <div>
-              <center>
-              <button type="button" class="btn btn-primary btn-lg">Respond to Ye King</button>
-              <button type="button" class="btn btn-primary btn-lg">Overthrow Ye King</button>
-              </center>
-              <br>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <center><button type="button" class="btn btn-primary btn-lg" style="width:80%">Respond to Ye King</button></center>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <center><button type="button" class="btn btn-primary btn-lg" style="width:80%">Overthrow Ye King</button></center>
             </div>
         </div>
+        <br>
     </div>
 </div>
+
 
 <div class="container">
     <div class="panel panel-default">
       <div class="panel-body">
         <% if current_user != @current_prompt.king %>
+        <form>
           <%= form_for @response do |f|%>
             <%= f.hidden_field :subject_id, value: current_user.id %>
             <%= f.hidden_field :prompt_id, value: @current_prompt.id %>
             <div class="field">
+              <label for="exampleInputFile">Response</label>
               <%= f.text_field :content, class: "form-control", placeholder: "Enter your response here" %>
-              <%= f.file_field :image, class: "form-control"%>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="exampleInputFile">File input</label>
+              <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
             </div>
             <div class="actions">
-              <%= f.submit "Respond", class: "btn btn-primary btn-sm" %>
+              <%= f.submit "Respond", class: "btn btn-primary" %>
             </div>
           <% end %>
+        </form>
         <% end %>
       </div>
     </div>
+</div>
+
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-top:1%">
+          <div style="display:block; text-align:center">
+            <i class="fa fa-thumbs-up" aria-hidden="true" style="font-size: 40px"></i>
+            <figcaption class="figure-caption text-xs-right">X Votes</figcaption>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-9">
+          <label for="exampleInputFile">NAME responded...</label>
+          <p class="list-group-item-text">Text</p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2">
+          <div style="display:block; text-align:center">
+            <img src="https://www.dogfoodadvisor.com/wp-content/uploads/2011/08/dfa-icon.jpg" alt="..." class="img-rounded" style="horizontal-align: middle">
+            <figcaption class="figure-caption text-xs">NAME</figcaption>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -80,6 +116,3 @@
       </div>
   </div>
 <% end %>
-
-
-
