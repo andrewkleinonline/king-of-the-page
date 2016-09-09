@@ -8,6 +8,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :facebook_user_id
       t.integer :points, default: 0
       t.boolean :king, default: false
+      t.boolean :admin, default: false
       t.timestamps
     end
   end

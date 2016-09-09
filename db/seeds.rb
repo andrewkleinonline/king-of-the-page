@@ -13,10 +13,10 @@ andrew = User.create(first_name: "Robert", last_name: "Zartop", profile_picture_
 logan = User.create(first_name: "Logan", last_name: "Gants", email: "lgants@gmail.com", profile_picture_url: "http://static.tumblr.com/37f6d18f902311cb5bdfae74cf6d95a8/f7hat5d/Wz9mmjtgq/tumblr_static_log")
 
 #create prompts
-khaleda.decrees.create(content: "What is your favorite color?",current: true)
-Prompt.create(content: "If you could have any superpower, what would it be?")
-Prompt.create(content: "What's your best pickup line?")
-Prompt.create(content: "What would you do if you knew you couldn't fail?")
+khaleda.decrees.create(content: "What is your favorite color?", current: true, pending: false)
+Prompt.create(content: "If you could have any superpower, what would it be?", pending: false)
+Prompt.create(content: "What's your best pickup line?", pending: false)
+Prompt.create(content: "What would you do if you knew you couldn't fail?", pending: false)
 
 
 

@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20160908231307) do
     t.string   "content"
     t.integer  "king_id"
     t.boolean  "current",            default: false
+    t.boolean  "pending",            default: true
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -46,6 +47,7 @@ ActiveRecord::Schema.define(version: 20160908231307) do
     t.string   "facebook_user_id"
     t.integer  "points",              default: 0
     t.boolean  "king",                default: false
+    t.boolean  "admin",               default: false
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
