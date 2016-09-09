@@ -21,10 +21,18 @@ class User < ApplicationRecord
     user.save
   end
 
+  def self.current_king
+    self.find_by(king: true)
+  end
+
   def make_king
+    current_king = User.current_king
+    current_king.update(king: false) if current_king
+    self.update(king: true)
+    mail_new_king
+  end
+
+  def mail_new_king
     KingMailer.king_email(self).deliver
-    #and then something like:
-    #User.find_by(is_king?: true).update(is_king?: false)
-    #self.is_king? = true
   end
 end
