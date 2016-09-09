@@ -1,4 +1,4 @@
 <%= form_for @prompt do |f| %>
-What is your decree?: <%= f.text_area :content %>
+What is your decree?: <%= f.text_area :content %> or <%= f.file_field :image %>
 <%= f.submit %>
 <% end %>

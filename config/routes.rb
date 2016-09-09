@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'main#main'
 
   get '/leaderboard', to: 'main#leaderboard'
-
+  get '/pastdecrees', to: 'prompts#index'
 
   resources :users
   resources :prompts

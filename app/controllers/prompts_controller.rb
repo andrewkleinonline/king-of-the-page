@@ -10,7 +10,8 @@ class PromptsController < ApplicationController
   def create
     @prompt = Prompt.create(prompt_params)
     @prompt.king = current_user
-    redirect_to prompt_path(@prompt)
+    redirect_to root_path
+    # redirect_to prompt_path(@prompt)
   end
 
   def show
@@ -28,6 +29,6 @@ class PromptsController < ApplicationController
 
   private
   def prompt_params
-    params.require(:prompt).permit(:content)
+    params.require(:prompt).permit(:content, :image)
   end
 end

@@ -9,6 +9,7 @@
                       <h3>The King hath decreed that the prompt is:</h3>
                       <div class="prompt">
                         <strong><h2><%= @current_prompt.content %></h2></strong>
+                        <%= image_tag @current_prompt.image.url(:medium) %>
                       </div>
                     </div>
                 <!-- </div> -->
@@ -47,6 +48,7 @@
             <%= f.hidden_field :prompt_id, value: @current_prompt.id %>
             <div class="field">
               <%= f.text_field :content, class: "form-control", placeholder: "Enter your response here" %>
+              <%= f.file_field :image, class: "form-control"%>
             </div>
             <div class="actions">
               <%= f.submit "Respond", class: "btn btn-primary btn-sm" %>
@@ -63,6 +65,7 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <%= response.content %>
+          <%= image_tag response.image.url(:medium) %>
           posted by: <%= response.subject.full_name %>
         </div>
       </div>

@@ -45,6 +45,6 @@ class ResponsesController < ApplicationController
 
   private
   def response_params
-    params.require(:response).permit(:content,:prompt_id,:subject_id)
+    params.require(:response).permit(:content,:prompt_id,:subject_id,:image)
   end
 end

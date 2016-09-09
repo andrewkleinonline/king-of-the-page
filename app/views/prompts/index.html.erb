@@ -1,0 +1,5 @@
+<h1>Past Decrees</h1>
+<% @prompts.each do |prompt| %>
+  <li><%= prompt.content %></li>
+  <li><%= image_tag response.image.url(:medium) %></li>
+<% end %>
