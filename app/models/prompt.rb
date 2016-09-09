@@ -2,7 +2,7 @@ class Prompt < ApplicationRecord
   belongs_to :king, :class_name => "User"
   has_many :responses
   has_many :subjects, through: :responses, :class_name => "User"
-  has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: ""
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   def self.current
@@ -15,4 +15,17 @@ class Prompt < ApplicationRecord
     self.update(current: true)
   end
 
+  # def approve_prompt
+  #   self.set_current
+  #   self.pending = false
+  # end
+
 end
+
+
+# pmt.set_current
+#
+# pmt.approve
+#   set_current
+#   sets it not pending
+# end

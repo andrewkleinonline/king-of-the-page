@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,7 @@
 
 <div class="container">
    <h2><%=@prompt.content%></h2>
-  
+
   <table class="table table-striped">
     <thead>
       <tr>
@@ -22,7 +23,7 @@
       </tr>
     </thead>
     <tbody>
-     
+
     <% @prompt.responses.each do |r| %>
       <tr>
         <td><%=r.content%></td>
@@ -37,5 +38,3 @@
 
 </body>
 </html>
-
-
