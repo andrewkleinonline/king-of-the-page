@@ -20,7 +20,7 @@ class ResponsesController < ApplicationController
     # redirect_to response_path(@response)
   end
 
-   def vote
+  def vote
     @response = Response.find(params[:id])
     @response.update_votes(current_user)
     respond_to do |format|

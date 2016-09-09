@@ -4,14 +4,22 @@ class PromptsController < ApplicationController
   end
 
   def new
-    @prompt = Prompt.new
+    if current_user.king
+      @prompt = Prompt.new
+    else
+      redirect_to root_path
+    end
   end
 
   def create
     @prompt = Prompt.create(prompt_params)
     @prompt.king = current_user
+
+    User.where(admin: true).each do |user|
+      AdminMailer.admin_email(user).deliver
+    end
+
     redirect_to root_path
-    # redirect_to prompt_path(@prompt)
   end
 
   def show

@@ -36,7 +36,8 @@
          </form>
          <ul class="nav navbar-nav navbar-right">
            <% if !logged_in? %>
-               <li><%=link_to "Sign In", "/sessions/new" %></li>
+               <li><%=link_to "Sign In", "/auth/facebook", id: "sign_in" %></li>
+              <!--
                <li><%=link_to "Sign Up", "/users/new" %></li>
            <% else %>
              <li><%=link_to "Sign Out", "/sessions/:id", method: :delete%></li>

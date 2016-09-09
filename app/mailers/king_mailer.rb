@@ -5,4 +5,5 @@ class KingMailer < ApplicationMailer
     @user = user
     mail(to: @user.email, subject: 'You are now the king!')
   end
+
 end

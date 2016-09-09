@@ -4,6 +4,7 @@ class CreatePrompts < ActiveRecord::Migration[5.0]
       t.string :content
       t.belongs_to :king
       t.boolean :current, default: false
+      t.boolean :pending, default: true
     end
   end
 end
