@@ -20,4 +20,11 @@ class User < ApplicationRecord
     user.profile_picture_url = auth[:info][:image]
     user.save
   end
+
+  def make_king
+    KingMailer.king_email(self).deliver
+    #and then something like:
+    #User.find_by(is_king?: true).update(is_king?: false)
+    #self.is_king? = true
+  end
 end
