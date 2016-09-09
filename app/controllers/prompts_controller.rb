@@ -26,6 +26,11 @@ class PromptsController < ApplicationController
     @prompt = Prompt.find(params[:id])
   end
 
+  def approve_prompt
+    @prompt.approve_prompt
+    redirect_to root_path
+  end
+
   def edit
   end
 

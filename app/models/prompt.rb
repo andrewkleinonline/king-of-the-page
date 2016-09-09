@@ -14,16 +14,12 @@ class Prompt < ApplicationRecord
     current_prompt.update(current: false) if current_prompt
     self.update(current: true)
   end
-  
+
   def approve_prompt
     self.set_current
     self.update(pending: false)
   end
 
-  # def approve_prompt
-  #   self.set_current
-  #   self.pending = false
-  # end
 
 end
 
