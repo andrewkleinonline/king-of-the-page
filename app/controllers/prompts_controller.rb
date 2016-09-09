@@ -12,9 +12,9 @@ class PromptsController < ApplicationController
   end
 
   def create
+
     @prompt = Prompt.create(prompt_params)
     @prompt.king = current_user
-
     User.where(admin: true).each do |user|
       AdminMailer.admin_email(user).deliver
     end
