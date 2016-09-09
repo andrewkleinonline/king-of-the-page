@@ -2,6 +2,8 @@ class Response < ApplicationRecord
   belongs_to :prompt
   belongs_to :subject, :class_name => "User"
   has_many :votes
+  has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   def update_votes(user)
     user_voted?(user) ? unvote(user) : vote(user)
@@ -17,7 +19,7 @@ class Response < ApplicationRecord
 
   def upvote_class(user)
     if user_voted?(user)
-       "<pre><code> &#128077; </code></pre>".html_safe 
+       "<pre><code> &#128077; </code></pre>".html_safe
     else
        "<pre><code> &#9994; </code></pre>".html_safe
     end
