@@ -7,7 +7,7 @@ class Response < ApplicationRecord
 
   def update_votes(user)
     user_voted?(user) ? unvote(user) : vote(user)
-    king_check(user)
+    self.king_check
   end
 
   def votes_message(user)
@@ -40,7 +40,7 @@ class Response < ApplicationRecord
     self.votes.find_by(subject_id: user.id).destroy
   end
 
-  def king_check(user)
+  def king_check
     kinger = 0
     temp_high_vote = 0
     prospective_king = []
@@ -50,9 +50,10 @@ class Response < ApplicationRecord
         temp_high_vote = r.votes.count
         prospective_king = response.subject
       end
-      if kinger == 5
-        prospective_king.make_king
-      end
+    end
+
+    if kinger == 2
+      prospective_king.make_king
     end
   end
 
