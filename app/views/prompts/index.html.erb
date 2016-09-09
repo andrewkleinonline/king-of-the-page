@@ -1,5 +1,7 @@
 <h1>Past Decrees</h1>
 <% @prompts.each do |prompt| %>
-  <li><%= prompt.content %>
+  <li><%= link_to prompt.content, prompt_path(prompt) %>
+  <% if prompt.image_file_name%>
   <%= image_tag prompt.image.url(:medium) %></li>
+  <% end %>
 <% end %>
