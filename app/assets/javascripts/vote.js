@@ -1,14 +1,13 @@
 
 $(document).ready(function () {
-  voteAjaxSuccessListener()
-})
+  voteAjaxSuccessListener();
+});
+
 
   function voteAjaxSuccessListener () {
-
-    $("a#vote_link").on("ajax:success", function(event, response){
-
-      $("[response_id=" + response.response_id + "] span").html(response.upvote_class)
-      $("[x_id=" + response.response_id + "] span").html(response.votes_message)
-      
-    })
+    $(".vote-link").on("ajax:complete", function(e, request, status){
+      var response = request.responseJSON;
+      $("#response_" + response.response_id + " i").attr('class', response.upvote_class);
+      $("#response_" + response.response_id + " .vote-count").text(`${response.votes_number} Votes`);
+    });
   }

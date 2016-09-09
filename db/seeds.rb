@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #create users
-khaleda = User.create(admin: true, king: true, first_name: "Khaleda", last_name: "Khan", email: "khaleda.khan87@gmail.com", profile_picture_url: "https://pbs.twimg.com/profile_images/447374371917922304/P4BzupWu.jpeg")
+khaleda = User.create(admin: true, king: true, first_name: "Khaleda", last_name: "Khan", email: "khaleda.khan87@gmail.com", profile_picture_url: "http://iconshow.me/media/images/animals/animal-toys-icons/png/128/Rabbit.png")
 ece = User.create(admin: true, first_name: "Ece", last_name: "Ozalp", email:"ecezalp@gmail.com", profile_picture_url: "http://blog.dictionary.com/wp-content/uploads/2010/11/turkey_big.jpg")
 andrew = User.create(admin: true, first_name: "Andy", last_name: "Cline", email: "andrew.klein.j@gmail.com", profile_picture_url: "https://thumbs.dreamstime.com/x/silly-man-5895642.jpg")
 logan = User.create(admin: true, first_name: "Logan", last_name: "Gants", email: "lgants@gmail.com", profile_picture_url: "http://static.tumblr.com/37f6d18f902311cb5bdfae74cf6d95a8/f7hat5d/Wz9mmjtgq/tumblr_static_log")

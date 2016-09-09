@@ -3,7 +3,7 @@ class MainController < ApplicationController
 
   def main
 
-    @current_prompt = Prompt.find_by(current: true)
+    @current_prompt = Prompt.current
     @response = Response.new
   end
 
