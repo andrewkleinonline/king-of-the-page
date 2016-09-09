@@ -27,19 +27,17 @@ class Response < ApplicationRecord
     self.king_check
   end
 
-  def votes_message(user)
-    if !user_voted?(user)
-      "<strong>#{self.votes.count} people</strong> voted for this response".html_safe
-    else
-      "<strong>You</strong> and <strong>#{self.votes.count - 1} other people</strong> voted for this response".html_safe
-    end
+  def votes_number(user)
+    "#{self.votes.count}".html_safe
   end
 
   def upvote_class(user)
     if user_voted?(user)
-       "<pre><code> &#128077; </code></pre>".html_safe
+      "fa fa-thumbs-up"
+      #  "<pre><code> &#128077; </code></pre>".html_safe
     else
-       "<pre><code> &#9994; </code></pre>".html_safe
+      "fa fa-thumbs-o-up"
+      #  "<pre><code> &#9994; </code></pre>".html_safe
     end
   end
 
@@ -57,6 +55,6 @@ class Response < ApplicationRecord
     self.votes.find_by(subject_id: user.id).destroy
   end
 
-  
+
 
 end
