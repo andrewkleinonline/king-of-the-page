@@ -13,7 +13,7 @@ andrew = User.create(first_name: "Robert", last_name: "Zartop", email: "rztop@gm
 logan = User.create(first_name: "Logan", last_name: "Gants", email: "lgants@gmail.com")
 
 #create prompts
-khaleda.decrees.create(content: "What is your favorite color?", current: true)
+khaleda.decrees.create(content: "What is your favorite color?",current: true)
 Prompt.create(content: "If you could have any superpower, what would it be?")
 Prompt.create(content: "What's your best pickup line?")
 Prompt.create(content: "What would you do if you knew you couldn't fail?")
