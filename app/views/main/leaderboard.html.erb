@@ -1,18 +1,31 @@
 
-<h1>Leaderboard</h1><br>
-<h2>Today's Decree</h2>
+<h2>Today's Decree:</h2>
 <h2><%= @current_prompt.content %>By: King  <%= @current_prompt.king.last_name.upcase %><br></h2>
 
-<%  @current_prompt.responses.each do |response|%>
-  <table class="table">
-    <tr>
-      <td><%=  response.content %></td>
-      <td>
-        <%=  response.subject.last_name %>
-      </td>
-      <td>
-        <%=  response.votes.count %>
-      </td>
-    </tr>
+
+
+<div class="container">
+  <h2>Leaderboard</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Response</th>
+        <th>Subject</th>
+        <th>Number of Votes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%  @current_prompt.responses.each do |response|%>
+          <tr>
+            <td><%=  response.content %></td>
+            <td>
+              <%=  response.subject.last_name %>
+            </td>
+            <td>
+              <%=  response.votes.count %>
+            </td>
+          </tr>
+      <% end %>
+    </tbody>
   </table>
-<% end %>
+</div>
