@@ -1,8 +1,11 @@
+
 <%= form_for @prompt do |f| %>
 What is your decree? <br><%= f.text_area :content %> <%= f.file_field :image %>
 
 Subjects should respond with text,image, or both?<br>
+<<<<<<< HEAD
 <input type="radio" name='data_type' value="text">Text<br>
 <input type="radio" name='data_type' value="img"> Image<br>
+
 <%= f.submit %>
 <% end %>
