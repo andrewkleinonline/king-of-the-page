@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :profile_picture_url
       t.string :facebook_user_id
       t.integer :points, default: 0
+      t.boolean :king, default: false
       t.timestamps
     end
   end

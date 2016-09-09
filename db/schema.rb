@@ -45,8 +45,9 @@ ActiveRecord::Schema.define(version: 20160908231307) do
     t.string   "profile_picture_url"
     t.string   "facebook_user_id"
     t.integer  "points",              default: 0
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.boolean  "king",                default: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   create_table "votes", force: :cascade do |t|
