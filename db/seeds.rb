@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #create users
-khaleda = User.create(king: true, first_name: "Khaleda", last_name: "Khan", email: "khaleda.khan87@gmail.com", profile_picture_url: "https://pbs.twimg.com/profile_images/447374371917922304/P4BzupWu.jpeg")
-ece = User.create(first_name: "Ece", last_name: "Ozalp", profile_picture_url: "http://blog.dictionary.com/wp-content/uploads/2010/11/turkey_big.jpg")
-andrew = User.create(first_name: "Robert", last_name: "Zartop", profile_picture_url: "https://thumbs.dreamstime.com/x/silly-man-5895642.jpg")
-logan = User.create(first_name: "Logan", last_name: "Gants", email: "lgants@gmail.com", profile_picture_url: "http://static.tumblr.com/37f6d18f902311cb5bdfae74cf6d95a8/f7hat5d/Wz9mmjtgq/tumblr_static_log")
+khaleda = User.create(admin: true, king: true, first_name: "Khaleda", last_name: "Khan", email: "khaleda.khan87@gmail.com", profile_picture_url: "https://pbs.twimg.com/profile_images/447374371917922304/P4BzupWu.jpeg")
+ece = User.create(admin: true, first_name: "Ece", last_name: "Ozalp", email:"ecezalp@gmail.com", profile_picture_url: "http://blog.dictionary.com/wp-content/uploads/2010/11/turkey_big.jpg")
+andrew = User.create(admin: true, first_name: "Andy", last_name: "Cline", email: "andrew.klein.j@gmail.com", profile_picture_url: "https://thumbs.dreamstime.com/x/silly-man-5895642.jpg")
+logan = User.create(admin: true, first_name: "Logan", last_name: "Gants", email: "lgants@gmail.com", profile_picture_url: "http://static.tumblr.com/37f6d18f902311cb5bdfae74cf6d95a8/f7hat5d/Wz9mmjtgq/tumblr_static_log")
 
 #create prompts
 khaleda.decrees.create(content: "What is your favorite color?", current: true, pending: false)
