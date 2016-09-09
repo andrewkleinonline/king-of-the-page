@@ -12,7 +12,7 @@
 
 <div class="container">
    <h2><%=@prompt.content%></h2>
-  
+
   <table class="table table-striped">
     <thead>
       <tr>
@@ -22,7 +22,7 @@
       </tr>
     </thead>
     <tbody>
-     
+
     <% @prompt.responses.each do |r| %>
       <tr>
         <td><%=r.content%></td>
@@ -34,8 +34,10 @@
     </tbody>
   </table>
 </div>
+  <%if current_user.admin %>
+  Hi <%= current_user.first_name %>, please approve the current decree<br>
+  <%= button_to "Approve Decree", root_path, method: :get%>
+  <% end %>
 
-</body>
+  </body>
 </html>
-
-
