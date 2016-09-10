@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :responses
   resources :main
 
-  post '/prompt/:id/admin' => 'prompt#approve_prompt'
+  post '/prompts/:id' => 'prompts#approve_prompt'
   post '/response/:id/vote' => 'responses#vote', as: :vote
 
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
