@@ -14,7 +14,6 @@ class PromptsController < ApplicationController
   def create
 
     @prompt = Prompt.create(prompt_params)
-    @prompt.king = current_user
     User.where(admin: true).each do |user|
       AdminMailer.admin_email(user).deliver
     end
@@ -27,7 +26,11 @@ class PromptsController < ApplicationController
   end
 
   def approve_prompt
-    @prompt.approve_prompt
+    @prompt = Prompt.find(params[:id])
+    @prompt.set_current
+    @prompt.update(pending: false)
+    
+    @prompt.save
     redirect_to root_path
   end
 
@@ -42,6 +45,6 @@ class PromptsController < ApplicationController
 
   private
   def prompt_params
-    params.require(:prompt).permit(:content, :image)
+    params.require(:prompt).permit(:content, :image, :king_id)
   end
 end

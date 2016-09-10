@@ -23,6 +23,7 @@
 
                       <img src="<%= @current_prompt.king.profile_picture_url %>"  alt="...">
                       <div class="caption">
+                      <%@current_prompt.king = User.last%>
 
                         <h3>King <%= @current_prompt.king.full_name %></h3>
                         <p>Rank: TBD</p>
