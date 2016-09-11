@@ -56,12 +56,12 @@
             <%= f.hidden_field :prompt_id, value: @current_prompt.id %>
             <div class="field">
               <label for="exampleInputFile">Response</label>
-                <%= f.text_field :content, id: "txt_response", class: "form-control", placeholder: "Enter your response here" %>
+                <%= f.text_field :content,  class: "form-control",class: "text_response", placeholder: "Enter your response here" %>
             </div>
             <br>
             <div class="form-group">
               <label for="exampleInputFile">File input</label>
-              <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+              <input type="file" class="form-control-file" class="image_response" id="exampleInputFile" aria-describedby="fileHelp">
             </div>
             <div class="actions">
               <%= f.submit "Respond", class: "btn btn-primary" %>
@@ -89,7 +89,7 @@
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9">
           <label for="exampleInputFile"><%= response.subject.full_name %> responded...</label>
-          <p class="list-group-item-text"><%= response.content %></p>
+          <p class="list-group-item-text"><%= response.content %><br><%= image_tag @current_prompt.image.url(:medium) %></p>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-2">
           <div style="display:block; text-align:center">
