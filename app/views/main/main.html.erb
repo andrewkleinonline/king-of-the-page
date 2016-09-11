@@ -25,10 +25,10 @@
                       <div class="caption">
                       <%@current_prompt.king%>
 
-                        <h3>King <%= link_to(@current_prompt.king.full_name, user_path(@current_prompt.king_id)) %></h3>
+                        <h3>King <%= @current_prompt.king.full_name %></h3>
                         <p>Rank: TBD</p>
                         <p>Points: TBD</p>
-                        <p><center><a href="/users/<% @current_prompt.king.id %>" class="btn btn-primary" role="button">Profile</a></center></p>
+                        <p><center><a href="<%= user_path(@current_prompt.king_id) %>" class="btn btn-primary" role="button">Profile</a></center></p>
                       </div>
                     </div>
                 </div>
