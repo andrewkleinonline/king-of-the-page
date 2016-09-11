@@ -23,9 +23,10 @@ class ResponsesController < ApplicationController
   def vote
     @response = Response.find(params[:id])
     @response.update_votes(current_user)
+
     respond_to do |format|
       format.html {redirect_to root_path}
-      format.json {render json: {response_id: @response.id, upvote_class: @response.upvote_class(current_user), votes_number: @response.votes_number(current_user)}}
+      format.json {render json: {response_id: @response.id, upvote_class: @response.upvote_class(current_user), votes_number: @response.votes_number(current_user), subject_points: @response.subject_points(current_user), king_points: @response.king_points}}
     end
     # redirect_to root_path
   end

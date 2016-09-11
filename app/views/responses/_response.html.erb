@@ -1,6 +1,33 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-top:1%">
+          <div style="display:block; text-align:center">
+            <i class="fa fa-thumbs-up" aria-hidden="true" style="font-size: 40px"></i>
+            <figcaption class="figure-caption text-xs-right">X Votes</figcaption>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-9">
+          <label for="exampleInputFile">NAME responded...</label>
+          <p class="list-group-item-text">Text</p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2">
+          <div style="display:block; text-align:center">
+            <img src="https://www.dogfoodadvisor.com/wp-content/uploads/2011/08/dfa-icon.jpg" alt="..." class="img-rounded" style="horizontal-align: middle">
+            <figcaption class="figure-caption text-xs">NAME</figcaption>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="response" data-response-id=<%= response.id %>>
-  <%= response.content %> -- <%= response.subject.full_name %>
+
+
+
+<!-- <div class="response" data-response-id=<%= response.id %>>
+  <%= response.content %> <%= response.subject.full_name %>
 </div>
 
 <div class="vote">
@@ -11,8 +38,8 @@
               </div>
             <% end %>
             <div class="votes-message" x_id="<%= response.id %>"> <span class=<%= response.votes_message(current_user) %></span></div>
-          </div> <!-- end like -->
+          </div>
 
 <hr>
 
-<br>
+<br> -->
