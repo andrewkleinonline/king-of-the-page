@@ -51,7 +51,7 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <% if logged_in? && current_user != @current_prompt.king %>
-          <%= form_for (@response, remote: true) do |f|%>
+          <%= form_for @response do |f|%>
             <%= f.hidden_field :subject_id, value: current_user.id %>
             <%= f.hidden_field :prompt_id, value: @current_prompt.id %>
             <div class="field">
