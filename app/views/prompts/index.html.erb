@@ -9,3 +9,25 @@
   <% end %>
   <%end %>
 <% end %>
+
+
+<% @prompts.each do |prompt| %>
+<div class="container" id="response_<%= prompt.id %>">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-lg-10 col-md-10 col-sm-10">
+          <label for="exampleInputFile">King <%= prompt.king_name_check %> decreed on <%= prompt.created_at.strftime("%a, %b %d %Y") %> that: </label>
+          <p class="list-group-item-text"><%= prompt.content %></p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2">
+          <div style="display:block; text-align:center">
+            <img src="<%= prompt.king_image_check %>" alt="..." class="img-rounded" style="horizontal-align: middle; width:64px; height:64px">
+            <figcaption class="figure-caption text-xs"><%= prompt.king_name_check %></figcaption>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
