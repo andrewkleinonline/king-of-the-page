@@ -12,6 +12,10 @@ class User < ApplicationRecord
     "#{self.first_name} #{self.last_name}"
   end
 
+  def abbreviated_full_name
+    "#{self.first_name} #{self.last_name[0]}."
+  end
+
   def self.create_from_omniauth(auth)
     user = self.find_or_create_by(facebook_user_id: auth[:uid])
     user.first_name = auth[:info][:first_name]
@@ -28,7 +32,9 @@ class User < ApplicationRecord
   def make_king
     current_king = User.current_king
     current_king.update(king: false) if current_king
-    self.update(king: true)
+    current_score = self.points
+    new_score = current_score += 50
+    self.update(king: true, points: new_score)
     mail_new_king
   end
 
@@ -38,6 +44,21 @@ class User < ApplicationRecord
 
   def show
     @user = user
+  end
+
+  def check_rank
+    case
+      when self.points > 2
+        "rank 2"
+      when self.points > 3
+        "rank 3"
+      when self.points > 4
+        "rank 4"
+      when self.points > 5
+        "rank 5"
+      else
+        "rank 1"
+    end
   end
 
 end
