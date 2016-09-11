@@ -12,7 +12,7 @@
                       <h3>Yee King hath decreed the prompt is:</h3>
                       <div class="prompt">
                         <%if !@current_prompt.pending%>
-                          <strong><h2><%= @current_prompt.content %></h2></strong>
+                          <strong><h2 style="font-size: 2.5em"><%= @current_prompt.content %></h2></strong>
                           <%= image_tag @current_prompt.image.url(:medium) %>
                         <% end %>
                       </div>
@@ -53,7 +53,7 @@
 
 
 <% if logged_in? && current_user != @current_prompt.king %>
-  <div class="container">
+  <div class="container" id="respond-form">
       <div class="panel panel-default">
         <div class="panel-body">
             <%= form_for @response do |f|%>
@@ -69,7 +69,7 @@
                 <input type="file" class="form-control-file" class="image_response" id="exampleInputFile" aria-describedby="fileHelp">
               </div>
               <div class="actions">
-                <%= f.submit "Respond", class: "btn btn-primary" %>
+                <%= f.submit "Respond", class: "btn btn-primary", id: "respond-button-submit" %>
               </div>
             <% end %>
           </form>
@@ -93,7 +93,7 @@
           </div>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-9" style="position:relative">
-          <p class="list-group-item-text" style="font-size: 2.5em"><%= response.content %><br><%= image_tag @current_prompt.image.url(:medium) %></p>
+          <p class="list-group-item-text" style="font-size: 2.25em"><%= response.content %><br><%= image_tag @current_prompt.image.url(:medium) %></p>
           <br>
           <br>
           <p> <%= response.subject.abbreviated_full_name %> responded <%= response.subject.created_at.strftime("%a, %b %d %Y") %></p>
