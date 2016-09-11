@@ -20,6 +20,21 @@ class Prompt < ApplicationRecord
     self.update(pending: false)
   end
 
+  def king_name_check
+    if self.king_id == nil
+      "Not Found"
+    else
+      User.find(self.king_id).first_name
+    end
+  end 
+
+  def king_image_check
+    if self.king_id == nil
+      "http://replygif.net/thumbnail/1322.gif"
+    else
+      User.find(self.king_id).profile_picture_url
+    end
+  end
 
 end
 
