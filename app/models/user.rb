@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :responses, :foreign_key => 'subject_id'
   has_many :votes, :foreign_key => 'subject_id'
   has_many :prompts, :foreign_key => 'subject_id', through: :responses
+  # has_many :overthrown_prompts, :foreign_key => 'overthrower_id', through: :overthrows, :class_name => "Prompt"
   #has_secure_password
   #has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   #validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
@@ -67,5 +68,18 @@ class User < ApplicationRecord
       "Peasant"
     end
   end
+
+
+  private
+    def update_overthrow_points_success
+      binding.pry
+
+    end
+
+    def update_overthrow_points_failure
+
+    end
+
+
 
 end
