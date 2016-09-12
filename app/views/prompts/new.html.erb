@@ -2,40 +2,38 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <%= form_for @prompt do |f| %>
-        <form>
-          <div class="form-group">
-            <label for="exampleTextarea">Enter The Royal Decree Below</label>
-            <%= f.text_area :content, class: "form-control", id: "exampleTextarea", rows: "3" %>
-            <small id="emailHelp" class="form-text text-muted">May we humbly suggest that you phrase the decree in the form of a question?</small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputFile">File input</label>
-            <%= f.file_field :image, type: "file", class: "form-control-file", id: "exampleInputFile", "aria-describedby" => "fileHelp" %>
-            <small id="fileHelp" class="form-text text-muted">May we humbly suggest that should you wish to include an image, it's dimensions not exceed 1200 x 1200 px?</small>
-          </div>
-          <fieldset class="form-group">
-            <div class="form-check">
-              <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                Enable Response with Image and Text
-              </label>
-            </div>
-            <div class="form-check">
+        <div class="form-group">
+          <label for="exampleTextarea">Enter The Royal Decree Below</label>
+          <%= f.text_area :content, class: "form-control", id: "exampleTextarea", rows: "3" %>
+          <small id="emailHelp" class="form-text text-muted">May we humbly suggest that you phrase the decree in the form of a question?</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">File input</label>
+          <%= f.file_field :image, type: "file", class: "form-control-file", id: "exampleInputFile", "aria-describedby" => "fileHelp" %>
+          <small id="fileHelp" class="form-text text-muted">May we humbly suggest that should you wish to include an image, it's dimensions not exceed 1200 x 1200 px?</small>
+        </div>
+        <fieldset class="form-group">
+          <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-                Enable Response with Image
-              </label>
-            </div>
-            <div class="form-check disabled">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-                Enable Response with Text
-              </label>
-            </div>
-          </fieldset>
-          <%= f.hidden_field :king_id, value: current_user.id %>
-          <%= f.submit "Submit", class: "btn btn-primary user-prompt-button"  %>
-        </form>
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+              Enable Response with Image and Text
+            </label>
+          </div>
+          <div class="form-check">
+          <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+              Enable Response with Image
+            </label>
+          </div>
+          <div class="form-check disabled">
+          <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+              Enable Response with Text
+            </label>
+          </div>
+        </fieldset>
+        <%= f.hidden_field :king_id, value: current_user.id %>
+        <%= f.submit "Submit", class: "btn btn-primary user-prompt-button"  %>
       <% end %>
     </div>
   </div>
