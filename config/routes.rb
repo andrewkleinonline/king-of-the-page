@@ -7,12 +7,14 @@ Rails.application.routes.draw do
 
   get '/leaderboard', to: 'main#leaderboard'
   get '/pastdecrees', to: 'prompts#index'
+  get '/overthrown', to: 'static#overthrown'
 
   resources :users
   resources :prompts
   resources :sessions, only: [:new, :destroy]
   resources :responses
   resources :main
+  resources :overthrows, only: [:create]
 
   post '/prompts/:id' => 'prompts#approve_prompt'
   post '/response/:id/vote' => 'responses#vote', as: :vote

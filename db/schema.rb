@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160911175533) do
+ActiveRecord::Schema.define(version: 20160912140057) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "overthrows", force: :cascade do |t|
+    t.integer "subject_id"
+    t.integer "prompt_id"
+    t.index ["prompt_id"], name: "index_overthrows_on_prompt_id", using: :btree
+    t.index ["subject_id"], name: "index_overthrows_on_subject_id", using: :btree
+  end
 
   create_table "prompts", force: :cascade do |t|
     t.string   "content"
