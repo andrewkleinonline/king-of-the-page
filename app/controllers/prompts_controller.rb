@@ -15,7 +15,7 @@ class PromptsController < ApplicationController
 
     @prompt = Prompt.create(prompt_params)
     User.where(admin: true).each do |user|
-      AdminMailer.admin_email(user).deliver
+      AdminMailer.admin_email(user, @prompt.id).deliver
     end
 
     redirect_to root_path
