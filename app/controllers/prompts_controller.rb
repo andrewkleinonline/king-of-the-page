@@ -6,10 +6,11 @@ class PromptsController < ApplicationController
   end
 
   def new
-    if logged_in? && current_user.king
-      @prompt = Prompt.new
+    if !current_user.king
+      redirect_to root_path
     end
-    redirect_to root_path
+    @prompt = Prompt.new
+
   end
 
 
