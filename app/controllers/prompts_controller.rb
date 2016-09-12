@@ -46,6 +46,6 @@ class PromptsController < ApplicationController
 
   private
   def prompt_params
-    params.require(:prompt).permit(:content, :image, :king_id)
+    params.require(:prompt).permit(:content, :image, :king_id, :response_type)
   end
 end
