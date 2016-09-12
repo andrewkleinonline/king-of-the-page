@@ -48,16 +48,22 @@ class User < ApplicationRecord
 
   def check_rank
     case
-      when self.points > 2
-        "rank 2"
-      when self.points > 3
-        "rank 3"
-      when self.points > 4
-        "rank 4"
-      when self.points > 5
-        "rank 5"
-      else
-        "rank 1"
+    when self.points > 100000
+      "Monarch"
+    when self.points > 10000
+      "Noble"
+    when self.points > 1000
+      "Knight"
+    when self.points > 500
+      "Vassal"
+    when self.points > 250
+      "Merchant"
+    when self.points > 100
+      "Craftsman"
+    when self.points > 10
+      "Serf"
+    else
+      "Peasant"
     end
   end
 

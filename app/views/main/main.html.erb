@@ -9,7 +9,7 @@
             <div class="col-lg-7 col-md-7 col-sm-7">
                 <!-- <div class="panel panel-default"> -->
                     <div class="panel-body">
-                      <h3>Yee King hath decreed the prompt is:</h3>
+                      <h3>Henceforth the king hath decreed!</h3>
                       <div class="prompt">
                         <%if !@current_prompt.pending%>
                           <strong><h2 style="font-size: 2.5em"><%= @current_prompt.content %></h2></strong>
@@ -28,8 +28,8 @@
                       <div class="caption">
                       <%@current_prompt.king%>
                         <center><h3 style="line-height:0.5em; margin-top:0.5em; font-weight: bold">King <%= @current_prompt.king.abbreviated_full_name %></h3></center>
-                        <center><p style="font-size: 1.2em; line-height:0.6em; margin-top:0.7em">Rank: <%= @current_prompt.king.check_rank %></p></center>
-                        <center><p style="font-size: 1.2em; line-height:0.6em; margin-top:0.7em" id="king-points">Points: <%= @current_prompt.king.points %> Points</p></center>
+                        <center><p style="font-size: 1.2em; line-height:0.6em; margin-top:0.7em"><%= @current_prompt.king.check_rank %></p></center>
+                        <center><p style="font-size: 1.2em; line-height:0.6em; margin-top:0.7em" id="king-points"><%= @current_prompt.king.points %> points</p></center>
                         <br>
                         <p style="font-size: 0.8em; line-height:0.25em; margin-top:0.25em">Reign Began: <%= @current_prompt.created_at.strftime("%a, %b %d %Y") %> </p>
                         <p style="font-size: 0.8em; line-height:0.25em; margin-top:0.25em">Joined Kingdom: <%= @current_prompt.king.created_at.strftime("%a, %b %d %Y") %> </p>
@@ -41,10 +41,10 @@
           </div>
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6">
-              <center><button type="button" class="btn btn-primary btn-lg" style="width:80%" id="respond-button">Respond to Ye King</button></center>
+              <center><button type="button" class="btn btn-primary btn-lg" style="width:80%" id="respond-button">Respond to The King <i class="fa fa-comment" aria-hidden="true"></i></button></center>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
-              <center><button type="button" class="btn btn-primary btn-lg" style="width:80%" id="overthrow-button">Overthrow Yee King</button></center>
+              <center><button type="button" class="btn btn-primary btn-lg" style="width:80%" id="overthrow-button"> Overthrow The King <i class="fa fa-bomb" aria-hidden="true"></i></button></center>
             </div>
         </div>
         <br>
@@ -77,6 +77,17 @@
       </div>
   </div>
 <% end %>
+
+<div class="container" id="overthrow-box">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <br>
+      <center><h3 style="line-height:0.5; margin-top:0.5em;">The revolution is underway!</h3></center>
+      <center><h3 style="line-height:0.5; margin-top:0.5em;">If enough subjects move to overthrow, a new king shall be crowned.</h3></center>
+      <br>
+    </div>
+  </div>
+</div>
 
 
 <% @current_prompt.responses.each do |response| %>
