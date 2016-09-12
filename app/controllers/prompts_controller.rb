@@ -1,19 +1,19 @@
+require 'pry'
+
 class PromptsController < ApplicationController
   def index
     @prompts = Prompt.all
   end
 
   def new
-    if logged_in?
-      if current_user.king
-        @prompt = Prompt.new
-      end
-    end
-    redirect_to root_path
+    if current_user.king
+      @prompt = Prompt.new
+    else
+  redirect_to root_path
+  end
   end 
 
   def create
-
     @prompt = Prompt.create(prompt_params)
     User.where(admin: true).each do |user|
       AdminMailer.admin_email(user).deliver
