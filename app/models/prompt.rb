@@ -49,6 +49,10 @@ class Prompt < ApplicationRecord
     end
   end
 
+  def self.prompt_pending?
+    self.find_by(pending: true)
+  end
+
   def king_image_check
     if self.king_id == nil
       "http://replygif.net/thumbnail/1322.gif"

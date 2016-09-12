@@ -38,7 +38,7 @@
 <%if @prompt.pending %>
   <%if current_user.admin %>
   Hi <%= current_user.first_name %>, please approve the current decree<br>
-  <%= button_to "Approve Decree", prompt_path, method: :post%>
+  <%= button_to "Approve Decree", prompt_path, form_class: "approve-button", method: :post%>
   <% end %>
   <% end %>
 

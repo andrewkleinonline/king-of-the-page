@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  helper_method :current_user, :logged_in?
+  helper_method :current_user, :logged_in?, :prompt_pending?
 
 
   def current_user
@@ -12,4 +12,10 @@ class ApplicationController < ActionController::Base
   def logged_in?
     !!session[:user_id]
   end
+
+
+  def prompt_pending?
+    Prompt.find_by(pending: true)
+  end
+
 end
