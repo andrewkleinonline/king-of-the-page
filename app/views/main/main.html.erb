@@ -29,7 +29,7 @@
                       <%@current_prompt.king%>
                         <center><h3 style="line-height:0.5em; margin-top:0.5em; font-weight: bold">King <%= @current_prompt.king.abbreviated_full_name %></h3></center>
                         <center><p style="font-size: 1.2em; line-height:0.6em; margin-top:0.7em"><%= @current_prompt.king.check_rank %></p></center>
-                        <center><p style="font-size: 1.2em; line-height:0.6em; margin-top:0.7em" id="king-points"><%= @current_prompt.king.points %> Points</p></center>
+                        <center><p style="font-size: 1.2em; line-height:0.6em; margin-top:0.7em" id="king-points"><%= @current_prompt.king.points %> points</p></center>
                         <br>
                         <p style="font-size: 0.8em; line-height:0.25em; margin-top:0.25em">Reign Began: <%= @current_prompt.created_at.strftime("%a, %b %d %Y") %> </p>
                         <p style="font-size: 0.8em; line-height:0.25em; margin-top:0.25em">Joined Kingdom: <%= @current_prompt.king.created_at.strftime("%a, %b %d %Y") %> </p>
