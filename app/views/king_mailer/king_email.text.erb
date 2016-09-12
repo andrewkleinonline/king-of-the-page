@@ -2,4 +2,5 @@ Hi, <%= @user.full_name %>...
 Or should I say KING <%= @user.last_name.upcase %>?
 
 Go to: localhost:3000/prompts/new
-<%= link_to "Make your new decree here!", "localhost:3000/prompts/new" %>
+<%= link_to "Make your new decree here! (Local)", "localhost:3000/prompts/new" %>
+<%= link_to "Make your new decree here! (Heroku)", "king-of-the-page.herokuapps.com/prompts/new" %>
