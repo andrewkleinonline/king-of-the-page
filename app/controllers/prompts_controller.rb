@@ -17,6 +17,7 @@ class PromptsController < ApplicationController
     User.where(admin: true).each do |user|
       AdminMailer.admin_email(user).deliver
     end
+    
 
     redirect_to root_path
   end

@@ -1,15 +1,10 @@
-<h1>Past Decrees</h1>
+ <div class="container", id="title">
+    <div class="col-lg-10">
+      <h1>Past Decrees</h1> 
+    </div>
+</div>
 
-<% @prompts.each do |prompt| %>
-
-<% if !prompt.current && !prompt.pending%>
-  <li><%= link_to prompt.content, prompt_path(prompt) %>
-  <% if prompt.image_file_name%>
-  <%= image_tag prompt.image.url(:medium) %></li>
-  <% end %>
-  <%end %>
-<% end %>
-
+<br> <br>
 
 <% @prompts.each do |prompt| %>
 <div class="container" id="response_<%= prompt.id %>">
