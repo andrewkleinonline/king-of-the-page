@@ -15,19 +15,22 @@
         <fieldset class="form-group">
           <div class="form-check">
             <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+              <%= f.radio_button :response_type, "img_and_text" %>
+              <!-- <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked> -->
               Enable Response with Image and Text
             </label>
           </div>
           <div class="form-check">
-          <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+            <label class="form-check-label">
+              <%= f.radio_button :response_type, "img" %>
+              <!-- <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2"> -->
               Enable Response with Image
             </label>
           </div>
           <div class="form-check disabled">
           <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+            <%= f.radio_button :response_type, "text" %>
+              <!-- <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3"> -->
               Enable Response with Text
             </label>
           </div>
