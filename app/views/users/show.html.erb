@@ -12,65 +12,57 @@
 
 
 
-<div class="container"
-<br><br> 
-<img src="<%=@user.profile_picture_url%>" class="pull-right" height="200" width="200">
-<br><br><br>
-<h2> <%= @user.first_name %> has been &#9813; &#9812; KING &#9812; &#9813; <%= @user.decrees.size%> times! </h2>
-</div>
+  <div class="container">
+    <div class="panel">
+      <div class="panel-default">
+        <br><br>
+        <img src="<%=@user.profile_picture_url%>" class="pull-right" height="200" width="200">
+        <br><br><br>
+        <h2> <%= @user.first_name %> has been &#9813; &#9812; KING &#9812; &#9813; <%= @user.decrees.size%> times! </h2>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <h3><%= @user.first_name %>'s past decrees: </h3>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            <% @user.decrees.each do |d| %>
+               <td><%= link_to d.content, prompt_path(d) %></td>
+            <% end %>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
+      <div class="span-5">
 
-
-<div class="container-fluid">
-<div class="row-fluid">
-<div class="span-5">
-
-
-  <h3><%= @user.first_name %>'s past decrees: </h3>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-     <tr>
-    <% @user.decrees.each do |d| %>
-       <td><%= link_to d.content, prompt_path(d) %></td>
-    <% end %>
-    </tr>
-    </tbody>
-  </table>
+        <h3><%= @user.first_name %>'s past responses: </h3>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Decree</th>
+              <th>Response</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <% @user.responses.each do |r| %>
+                <td><%= r.prompt.content %></td>
+                <td><%= r.content %></td>
+              <% end %>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+      </div>
+    </div>
   </div>
-
-  <div class="span-5">
-
-  <h3><%= @user.first_name %>'s past responses: </h3>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Decree</th>
-        <th>Response</th>
-      </tr>
-    </thead>
-    <tbody>
-     <tr>
-    <% @user.responses.each do |r| %>
-       <td><%= r.prompt.content %></td>
-       <td><%= r.content %></td>
-
-    <% end %>
-    </tr>
-    </tbody>
-  </table>
-  </div>
-  </div>
-
-
-
-</div>
-</div>
 
 </body>
 </html>
-

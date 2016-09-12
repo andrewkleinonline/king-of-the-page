@@ -2,7 +2,7 @@ require 'pry'
 
 class PromptsController < ApplicationController
   def index
-    @prompts = Prompt.all
+    @prompts = Prompt.where(pending: false, current: false)
   end
 
   def new
