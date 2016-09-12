@@ -29,7 +29,7 @@ class PromptsController < ApplicationController
     @prompt = Prompt.find(params[:id])
     @prompt.set_current
     @prompt.update(pending: false)
-    
+
     @prompt.save
     redirect_to root_path
   end
