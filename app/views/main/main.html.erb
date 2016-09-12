@@ -2,6 +2,10 @@
 <html>
 <head></head>
 <body>
+
+
+
+
 <div class="container">
     <div class="panel panel-default">
         <div class="row">
@@ -20,8 +24,8 @@
                         <h2> New Decree Pending </h2>
                         </div>
                     </div>
-                    
-                     
+
+
                   <%else%>
 
                     <div class="panel-body show-decree">
@@ -33,7 +37,7 @@
                         <% end %>
                       </div>
                     </div>
-                      
+
 
                 <% end %>
 
@@ -60,7 +64,7 @@
                         <center><p style="font-size: 1.2em; line-height:0.6em; margin-top:0.7em"><%= User.current_king.check_rank %></p></center>
                         <center><p style="font-size: 1.2em; line-height:0.6em; margin-top:0.7em" id="king-points"><%= User.current_king.points %> points</p></center>
                         <br>
-                       
+
                         <p style="font-size: 0.8em; line-height:0.25em; margin-top:0.25em">Joined Kingdom: <%= User.current_king.created_at.strftime("%a, %b %d %Y") %> </p>
                         <center><p><a href="/users/<% @current_prompt.king.id %>" class="btn btn-primary" role="button">Profile</a></p></center>
                       </div>
@@ -100,12 +104,10 @@
 <% else %>
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6">
-              <center><button type="button" class="btn btn-primary btn-lg" style="width:80%" id="respond-button">Respond to The King <i class="fa fa-comment" aria-hidden="true"></i></button></center>
+              <center><button type="button" class="btn btn-primary btn-lg" style="width:80%" id="respond-button">Respond to The King</button></center>
             </div>
-
-
-            <div class="col-lg-6 col-md-6 col-sm-6">
-              <center><button type="button" class="btn btn-primary btn-lg" style="width:80%" id="overthrow-button"> Overthrow The King <i class="fa fa-bomb" aria-hidden="true"></i></button></center>
+            <div class="col-lg-6 col-m<%=  %>d-6 col-sm-6">
+              <%= button_to "Overthrow the King ", overthrows_path, type: "button", class: "btn btn-primary btn-lg", style: "width:80%", id: "overthrow-button" %>
             </div>
 
               <% end %>
@@ -116,9 +118,11 @@
 
 
 
+
 <%if prompt_pending? || (@current_prompt.king == false) %>
 
-  <%else %>
+<%else %>
+
 
 <% if logged_in? && current_user != @current_prompt.king %>
   <div class="container" id="respond-form">

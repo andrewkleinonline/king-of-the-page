@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :overthrows, :foreign_key => 'subject_id'
   has_many :decrees, :foreign_key => 'king_id', :class_name => "Prompt"
   # has_many :responses, :foreign_key => 'king_id', through: :prompts
   has_many :responses, :foreign_key => 'subject_id'
