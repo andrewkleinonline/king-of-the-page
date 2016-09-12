@@ -9,6 +9,12 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
+
+#gray-out {
+  background-color: gray;
+  margin-color: gray;
+}
+
 body {
   margin: 0;
 }

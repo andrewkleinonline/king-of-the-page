@@ -119,11 +119,18 @@
     <%if @current_prompt.responses.any? {|r| r.subject_id == current_user.id}  %>
     
 
+
         <div class="row">
+
             <div class="col-lg-6 col-md-6 col-sm-6">
-              <center><button type="button" class="btn btn-primary btn-lg" style="width:80%" id="overthrow-button"> Overthrow The King <i class="fa fa-bomb" aria-hidden="true"></i></button></center>
+              <center><button type="button" class="btn btn-primary btn-lg" style="width:80%" id="gray-out"> Overthrow The King <i class="fa fa-bomb" aria-hidden="true"></i></button></center>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <center><button type="button" class="btn btn-primary btn-lg" style="width:80%" id="gray-out" >Respond to The King <i class="fa fa-comment" aria-hidden="true"></i></button></center>
             </div>
             </div>
+
+
               <% else %>
             
   

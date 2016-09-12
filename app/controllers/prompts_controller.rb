@@ -1,3 +1,5 @@
+require 'pry'
+
 class PromptsController < ApplicationController
   def index
     @prompts = Prompt.all
@@ -9,6 +11,7 @@ class PromptsController < ApplicationController
     end
     redirect_to root_path
   end
+
 
   def create
     @prompt = Prompt.create(prompt_params)
