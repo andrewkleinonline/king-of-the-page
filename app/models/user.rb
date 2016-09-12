@@ -71,15 +71,19 @@ class User < ApplicationRecord
 
 
   private
-    def update_overthrow_points_success
-      binding.pry
-
+    def self.update_overthrow_points_success
+      Prompt.current.overthrows.each do |overthrow|
+        overthrow.subject.points += 25
+        overthrow.subject.save
+      end
     end
 
-    def update_overthrow_points_failure
-
+    def self.update_overthrow_points_failure
+      Prompt.current.overthrows.each do |overthrow|
+        overthrow.subject.points -= 100
+        overthrow.subject.save
+      end
     end
-
 
 
 end
