@@ -1,21 +1,28 @@
 <head>
-<style>
-  .panel,.panel-default {
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 25px;
-  }
-</style>
+  <style>
+    .panel,.panel-default {
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 25px;
+    }
+
+  </style>
 </head>
 <body>
-
-
+  <div class="container">
+    <div class="panel">
+      <center>
+      <h1>Leaderboard</h1>
+      </center>
+    </div>
+  </div>
 
 <div class="container">
   <div class="panel">
+
     <h2>Today's Decree:</h2>
     <h2><%= @current_prompt.content %><br><br><%=link_to "BY: KING #{@current_prompt.king.last_name.upcase}", user_path(@current_prompt.king) %><br></h2>
 
-  <h2>Leaderboard</h2>
+
   <table class="table table-striped">
     <thead>
       <tr>
