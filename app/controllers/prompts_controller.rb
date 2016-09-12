@@ -6,20 +6,18 @@ class PromptsController < ApplicationController
   end
 
   def new
-    if current_user.king
+    if logged_in? && current_user.king
       @prompt = Prompt.new
-    else
-  redirect_to root_path
+    end
+    redirect_to root_path
   end
-  end 
+
 
   def create
     @prompt = Prompt.create(prompt_params)
     User.where(admin: true).each do |user|
       AdminMailer.admin_email(user).deliver
     end
-    
-
     redirect_to root_path
   end
 
