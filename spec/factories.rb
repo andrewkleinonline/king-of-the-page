@@ -1,6 +1,12 @@
 FactoryGirl.define do
  factory :response do
-    subject_id '1' 
+    subject_id '1'
+  end
+end
+
+FactoryGirl.define do
+  factory :user do
+    id {rand(10..100)}
   end
 end
 

@@ -69,7 +69,12 @@ class User < ApplicationRecord
     end
   end
 
-
+  def self.reset_all_king
+    self.all.each do |user|
+      user.king = false
+    end
+  end
+  
   private
     def self.update_overthrow_points_success
       Prompt.current.overthrows.each do |overthrow|
@@ -84,6 +89,8 @@ class User < ApplicationRecord
         overthrow.subject.save
       end
     end
+
+
 
 
 end

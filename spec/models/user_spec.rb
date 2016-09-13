@@ -3,7 +3,7 @@ require 'rails_helper'
 describe User do
   khaleda_khan = User.create(
   first_name: "Khaleda",
-  last_name: "Khan"
+  last_name: "Khan",
   points: 0
   )
   logan_gants = User.create(
@@ -25,15 +25,10 @@ describe User do
 
   khaleda_khan1 = User.create(
   first_name: "Khaleda1",
-  last_name: "Khan1"
+  last_name: "Khan1",
   points: 0
   )
-  logan_gants1 = User.create(
-  first_name: "Logan1",
-  last_name: "Gants1",
-  king: true,
-  points: 2000
-  )
+
   ece_zalp1 = User.create(
   first_name: "Ece1",
   last_name: "Zalp",
@@ -45,6 +40,8 @@ describe User do
   points: 11000
   )
 
+
+
   it 'it returns first name and last name with a space in between' do
     expect(khaleda_khan.full_name).to eq("Khaleda Khan")
   end
@@ -52,10 +49,14 @@ describe User do
     expect(khaleda_khan.abbreviated_full_name).to eq("Khaleda K.")
   end
   it "returns the current king" do
+    User.reset_all_king
+    logan_gants.update(king:true)
     expect(User.current_king).to eq(logan_gants)
   end
-  if 'returns user rank'
-    expect(khaleda_khan).to eq()
+
+  it 'test factory girl. user should have id' do
+    user_1 = create(:user)
+    expect(user_1).to be_valid
   end
 
 end
