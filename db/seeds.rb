@@ -11,7 +11,6 @@ khaleda = User.create(admin: true, king: true, first_name: "Khaleda", last_name:
 ece = User.create(admin: true, first_name: "Ece", last_name: "Ozalp", email:"ecezalp@gmail.com", profile_picture_url: "http://blog.dictionary.com/wp-content/uploads/2010/11/turkey_big.jpg")
 andrew = User.create(admin: true, first_name: "Andy", last_name: "Cline", email: "andrew.klein.j@gmail.com", profile_picture_url: "https://thumbs.dreamstime.com/x/silly-man-5895642.jpg")
 logan = User.create(admin: true, first_name: "Logan", last_name: "Gants", email: "lgants@gmail.com", profile_picture_url: "http://static.tumblr.com/37f6d18f902311cb5bdfae74cf6d95a8/f7hat5d/Wz9mmjtgq/tumblr_static_log")
-logan = User.create(admin: true, first_name: "Logan2", last_name: "Gants2", email: "lgants@gmail.com", profile_picture_url: "http://static.tumblr.com/37f6d18f902311cb5bdfae74cf6d95a8/f7hat5d/Wz9mmjtgq/tumblr_static_log")
 
 #create prompts
 khaleda.decrees.create(content: "What is your favorite color?", current: true, pending: false)
