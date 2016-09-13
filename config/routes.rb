@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get '/leaderboard', to: 'main#leaderboard'
   get '/pastdecrees', to: 'prompts#index'
-  get '/overthrown', to: 'static#overthrown', as: 'overthrown'
+  # get '/overthrown', to: 'static#overthrown', as: 'overthrown'
 
   resources :users
   resources :prompts
