@@ -5,7 +5,8 @@ class OverthrowsController < ApplicationController
     if Prompt.current.overthrown
       User.update_overthrow_points_success
       current_user.make_king
-      redirect_to overthrown_path
+      render :'static/overthrown'
+      # redirect_to overthrown_path
     else
       redirect_to root_path
     end
