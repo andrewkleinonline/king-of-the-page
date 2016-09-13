@@ -1,5 +1,3 @@
-
-
 class PromptsController < ApplicationController
   def index
     @prompts = Prompt.where(pending: false, current: false)
