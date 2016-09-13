@@ -3,7 +3,7 @@ $(document).ready(function () {
 });
 
 
-  function voteAjaxSuccessListener () {
+   var voteAjaxSuccessListener = function() {
     $(".vote-link").on("ajax:complete", function(e, request, status){
       var response = request.responseJSON;
       $("#response_" + response.response_id + " i").attr('class', response.upvote_class);
