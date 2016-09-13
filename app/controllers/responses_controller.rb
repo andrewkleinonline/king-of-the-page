@@ -1,3 +1,4 @@
+
 class ResponsesController < ApplicationController
   def index
     @responses = Response.all
@@ -21,6 +22,7 @@ class ResponsesController < ApplicationController
   end
 
   def vote
+
     @response = Response.find(params[:id])
     @response.update_votes(current_user)
 
