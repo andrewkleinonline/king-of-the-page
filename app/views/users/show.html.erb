@@ -17,13 +17,17 @@
 
 
 
-  <div class="container">
+  <div class="container" style="font-family: Lucida Blackletter">
     <div class="panel">
       <div class="panel-default">
         <br><br>
         <img src="<%=@user.profile_picture_url%>" class="pull-right" height="200" width="200">
         <br><br><br>
-        <h2> <%= @user.first_name %> has been &#9813; &#9812; KING &#9812; &#9813; <%= @user.decrees.size%> times! </h2>
+        <% if @user.decrees.size == 1 %>
+        <h1> <%= @user.first_name %> has been &#9813; &#9812; King &#9812; &#9813; <%= @user.decrees.size%> time! </h1>
+        <% else %>
+        <h1> <%= @user.first_name %> has been &#9813; &#9812; King &#9812; &#9813; <%= @user.decrees.size%> times! </h1>
+        <%end  %>
         <br>
         <br>
         <br>
@@ -38,7 +42,7 @@
           <tbody>
             <tr>
             <% @user.decrees.each do |d| %>
-               <td><%= link_to d.content, prompt_path(d) %></td>
+               <td><h4><%= link_to d.content, prompt_path(d) %></h4></td>
             <% end %>
             </tr>
           </tbody>
@@ -51,8 +55,8 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>Decree</th>
-              <th>Response</th>
+              <h4><th>Decree</th></h4>
+              <h4><th>Response</th></h4>
             </tr>
           </thead>
           <tbody>
