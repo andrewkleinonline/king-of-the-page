@@ -69,12 +69,17 @@ class User < ApplicationRecord
     end
   end
 
+  def update_points(points)
+    new_score = self.points + points
+    self.update(points: new_score)
+  end
+
   def self.reset_all_king
     self.all.each do |user|
       user.king = false
     end
   end
-  
+
   private
     def self.update_overthrow_points_success
       Prompt.current.overthrows.each do |overthrow|
