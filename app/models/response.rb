@@ -75,17 +75,21 @@ class Response < ApplicationRecord
 
   def update_king_points_vote
     king = User.find(self.prompt.king_id)
-    king_current_score = king.points
-    king_new_score = king_current_score += 1
-    king.update(points: king_new_score)
+    king.update_points(1)
+    # king_current_score = king.points
+    # king_new_score = king_current_score += 1
+    # king.update(points: king_new_score)
   end
 
   def update_king_points_unvote
     king = User.find(self.prompt.king_id)
-    king_current_score = king.points
-    king_new_score = king_current_score -= 1
-    king.update(points: king_new_score)
+    king.update_points(-1)
+    # king_current_score = king.points
+    # king_new_score = king_current_score -= 1
+    # king.update(points: king_new_score)
   end
+
+  
 
   def update_respondent_points_vote
     respondent = User.find(self.subject_id)
