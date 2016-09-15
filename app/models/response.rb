@@ -7,10 +7,9 @@ class Response < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   def king_check
-    binding.pry
     kinger = 0
     temp_high_vote = 0
-    #prospective_king = []
+    prospective_king = nil
     self.prompt.responses.each do |r|
       kinger += r.votes.count
       if r.votes.count > temp_high_vote
@@ -18,7 +17,7 @@ class Response < ApplicationRecord
         prospective_king = r.subject
       end
     end
-    if kinger == 2
+    if kinger == 5
       User.update_overthrow_points_failure
       binding.pry
       prospective_king.make_king
