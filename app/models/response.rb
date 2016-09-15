@@ -17,7 +17,7 @@ class Response < ApplicationRecord
         prospective_king = r.subject
       end
     end
-    if kinger == 5
+    if kinger == 3
       User.update_overthrow_points_failure
       binding.pry
       prospective_king.make_king
