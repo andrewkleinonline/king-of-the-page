@@ -6,6 +6,35 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+#King check seed
+#
+# banana = User.create(king: true, first_name: "Banana", last_name: "Man",
+# email: "ajkmailme@gmail.com")
+# logan = User.create(first_name: "Logan", last_name: "Gants", email: "lgants@gmail.com")
+# gretchen = User.create(first_name: "Gretchen", last_name: "Gants", email: "andrew.klein@flatironschool.com")
+#
+#
+#
+# banana.decrees.create(content: "If you could have any superpower, what would it be?", current: true, pending: false, response_type: "text")
+# logan.responses.create(content: "hummunah hummunah")
+# Prompt.current.responses << logan.responses.first
+#
+# gretchen.responses.create(content: "drummunah drummunah")
+# Prompt.current.responses << gretchen.responses.first
+#
+#
+#
+# #logan.votes.create(response_id: 1)
+# 2.times do
+#   logan.responses.first.votes.create
+# end
+#
+# 2.times do
+#   gretchen.responses.first.votes.create
+# end
+
+
 # #Development Seed
 # #create users
 # khaleda = User.create(admin: true, king: true, first_name: "Khaleda", last_name: "Khan", email: "khaleda.khan87@gmail.com", profile_picture_url: "http://iconshow.me/media/images/animals/animal-toys-icons/png/128/Rabbit.png")
@@ -31,7 +60,7 @@
 # # kprompt.responses << l_response
 # # kprompt.responses << a_response
 
-#Demo seed
+# #Demo seed
 
 sidd_finch = User.create(king: true, first_name: "Sidd", last_name: "Finch", email: "ajkmailme@gmail.com", profile_picture_url: "http://afbucket.s3.amazonaws.com/1985siddfinch_lg.jpg")
 sidd_finch.decrees.create(content: "If you could have any superpower, what would it be?", current: true, pending: false, response_type: "text")
