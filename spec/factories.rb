@@ -1,6 +1,7 @@
 FactoryGirl.define do
  factory :response do
     subject_id '1'
+    content {Faker::Hipster.sentence}
   end
 end
 
