@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-14T17:56:10-04:00">2016-09-14T17:56:10-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-15T09:41:27-04:00">2016-09-15T09:41:27-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">69.13%</span></span>
+    (<span class="covered_percent"><span class="red">72.56%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.73
+       <span class="green">
+         1.09
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>25</b> files in total.
-    <b>230</b> relevant lines. 
-    <span class="green"><b>159</b> lines covered</span> and
-    <span class="red"><b>71</b> lines missed </span>
+    <b>277</b> relevant lines. 
+    <span class="green"><b>201</b> lines covered</span> and
+    <span class="red"><b>76</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -82,22 +82,22 @@
       
       <tr>
         <td class="strong"><a href="#6c25f09e8a44184ec07560b1256872b1b0f0ba10" class="src_link" title="app/models/response.rb">app/models/response.rb</a></td>
-        <td class="red strong">32.79 %</td>
-        <td>108</td>
-        <td>61</td>
+        <td class="red strong">30.77 %</td>
+        <td>104</td>
+        <td>65</td>
         <td>20</td>
-        <td>41</td>
+        <td>45</td>
         <td>0.3</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#228f431117cf713620a96634831ce025b89baa48" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
-        <td class="red strong">45.45 %</td>
-        <td>101</td>
-        <td>55</td>
-        <td>25</td>
-        <td>30</td>
-        <td>0.5</td>
+        <td class="red strong">50.0 %</td>
+        <td>96</td>
+        <td>52</td>
+        <td>26</td>
+        <td>26</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
@@ -263,31 +263,31 @@
       <tr>
         <td class="strong"><a href="#58b2d4353a6127264c9fecb26cbfcaf9d233b70b" class="src_link" title="spec/factories.rb">spec/factories.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>60</td>
-        <td>9</td>
-        <td>9</td>
+        <td>61</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
-        <td>1.9</td>
+        <td>8.2</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#7a1dea741a22f69af22147f33b6fd175ee6ec76a" class="src_link" title="spec/models/response_spec.rb">spec/models/response_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>14</td>
-        <td>6</td>
-        <td>6</td>
+        <td>19</td>
+        <td>9</td>
+        <td>9</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#0e41c768feecb097e08e4dfa489034a29ce3ed6d" class="src_link" title="spec/models/user_spec.rb">spec/models/user_spec.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>110</td>
-        <td>24</td>
-        <td>24</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td class="green strong">92.42 %</td>
+        <td>151</td>
+        <td>66</td>
+        <td>61</td>
+        <td>5</td>
+        <td>0.9</td>
       </tr>
       
       <tr>
@@ -415,11 +415,11 @@
         <div class="source_table" id="6c25f09e8a44184ec07560b1256872b1b0f0ba10">
   <div class="header">
     <h3>app/models/response.rb</h3>
-    <h4><span class="red">32.79 %</span> covered</h4>
+    <h4><span class="red">30.77 %</span> covered</h4>
     <div>
-      <b>61</b> relevant lines. 
+      <b>65</b> relevant lines. 
       <span class="green"><b>20</b> lines covered</span> and
-      <span class="red"><b>41</b> lines missed.</span>
+      <span class="red"><b>45</b> lines missed.</span>
     </div>
   </div>
   
@@ -891,184 +891,160 @@
         <li class="missed" data-hits="0" data-linenumber="78">
           
           
-          <code class="ruby">    king.update_points(1)</code>
+          <code class="ruby">    king_current_score = king.points</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="79">
+        <li class="missed" data-hits="0" data-linenumber="79">
           
           
-          <code class="ruby">    # king_current_score = king.points</code>
+          <code class="ruby">    king_new_score = king_current_score += 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="missed" data-hits="0" data-linenumber="80">
           
           
-          <code class="ruby">    # king_new_score = king_current_score += 1</code>
+          <code class="ruby">    king.update(points: king_new_score)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="81">
           
           
-          <code class="ruby">    # king.update(points: king_new_score)</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="82">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="83">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="84">
+        <li class="covered" data-hits="1" data-linenumber="83">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_king_points_unvote</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="85">
+        <li class="missed" data-hits="0" data-linenumber="84">
           
           
           <code class="ruby">    king = User.find(self.prompt.king_id)</code>
         </li>
       
+        <li class="missed" data-hits="0" data-linenumber="85">
+          
+          
+          <code class="ruby">    king_current_score = king.points</code>
+        </li>
+      
         <li class="missed" data-hits="0" data-linenumber="86">
           
           
-          <code class="ruby">    king.update_points(-1)</code>
+          <code class="ruby">    king_new_score = king_current_score -= 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="87">
+        <li class="missed" data-hits="0" data-linenumber="87">
           
           
-          <code class="ruby">    # king_current_score = king.points</code>
+          <code class="ruby">    king.update(points: king_new_score)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="88">
           
           
-          <code class="ruby">    # king_new_score = king_current_score -= 1</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="89">
           
           
-          <code class="ruby">    # king.update(points: king_new_score)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="90">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="91">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="92">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="93">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="94">
+        <li class="covered" data-hits="1" data-linenumber="90">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_respondent_points_vote</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="95">
+        <li class="missed" data-hits="0" data-linenumber="91">
           
           
           <code class="ruby">    respondent = User.find(self.subject_id)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="96">
+        <li class="missed" data-hits="0" data-linenumber="92">
           
           
           <code class="ruby">    respondent_current_score = respondent.points</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="97">
+        <li class="missed" data-hits="0" data-linenumber="93">
           
           
           <code class="ruby">    respondent_new_score = respondent_current_score += 3</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="98">
+        <li class="missed" data-hits="0" data-linenumber="94">
           
           
           <code class="ruby">    respondent.update(points: respondent_new_score)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="99">
+        <li class="never" data-hits="" data-linenumber="95">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="100">
+        <li class="never" data-hits="" data-linenumber="96">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="101">
+        <li class="covered" data-hits="1" data-linenumber="97">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_respondent_points_unvote</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="102">
+        <li class="missed" data-hits="0" data-linenumber="98">
           
           
           <code class="ruby">    respondent = User.find(self.subject_id)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="103">
+        <li class="missed" data-hits="0" data-linenumber="99">
           
           
           <code class="ruby">    respondent_current_score = respondent.points</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="104">
+        <li class="missed" data-hits="0" data-linenumber="100">
           
           
           <code class="ruby">    respondent_new_score = respondent_current_score -= 3</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="105">
+        <li class="missed" data-hits="0" data-linenumber="101">
           
           
           <code class="ruby">    respondent.update(points: respondent_new_score)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="106">
+        <li class="never" data-hits="" data-linenumber="102">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="107">
+        <li class="never" data-hits="" data-linenumber="103">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="108">
+        <li class="never" data-hits="" data-linenumber="104">
           
           
           <code class="ruby">end</code>
@@ -1081,11 +1057,11 @@
         <div class="source_table" id="228f431117cf713620a96634831ce025b89baa48">
   <div class="header">
     <h3>app/models/user.rb</h3>
-    <h4><span class="red">45.45 %</span> covered</h4>
+    <h4><span class="red">50.0 %</span> covered</h4>
     <div>
-      <b>55</b> relevant lines. 
-      <span class="green"><b>25</b> lines covered</span> and
-      <span class="red"><b>30</b> lines missed.</span>
+      <b>52</b> relevant lines. 
+      <span class="green"><b>26</b> lines covered</span> and
+      <span class="red"><b>26</b> lines missed.</span>
     </div>
   </div>
   
@@ -1170,8 +1146,8 @@
           <code class="ruby">  def full_name</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
           
           <code class="ruby">    &quot;#{self.first_name} #{self.last_name}&quot;</code>
         </li>
@@ -1194,8 +1170,8 @@
           <code class="ruby">  def abbreviated_full_name</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
           
           <code class="ruby">    &quot;#{self.first_name} #{self.last_name[0]}.&quot;</code>
         </li>
@@ -1272,8 +1248,8 @@
           <code class="ruby">  def self.current_king</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="31">
+          
           
           <code class="ruby">    self.find_by(king: true)</code>
         </li>
@@ -1410,8 +1386,8 @@
           <code class="ruby">    when self.points &gt; 100000</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="54">
-          
+        <li class="covered" data-hits="2" data-linenumber="54">
+          <span class="hits">2</span>
           
           <code class="ruby">      &quot;Monarch&quot;</code>
         </li>
@@ -1422,8 +1398,8 @@
           <code class="ruby">    when self.points &gt; 10000</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="56">
-          
+        <li class="covered" data-hits="3" data-linenumber="56">
+          <span class="hits">3</span>
           
           <code class="ruby">      &quot;Noble&quot;</code>
         </li>
@@ -1434,8 +1410,8 @@
           <code class="ruby">    when self.points &gt; 1000</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="58">
-          
+        <li class="covered" data-hits="3" data-linenumber="58">
+          <span class="hits">3</span>
           
           <code class="ruby">      &quot;Knight&quot;</code>
         </li>
@@ -1446,8 +1422,8 @@
           <code class="ruby">    when self.points &gt; 500</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="60">
-          
+        <li class="covered" data-hits="3" data-linenumber="60">
+          <span class="hits">3</span>
           
           <code class="ruby">      &quot;Vassal&quot;</code>
         </li>
@@ -1458,8 +1434,8 @@
           <code class="ruby">    when self.points &gt; 250</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="62">
-          
+        <li class="covered" data-hits="3" data-linenumber="62">
+          <span class="hits">3</span>
           
           <code class="ruby">      &quot;Merchant&quot;</code>
         </li>
@@ -1470,8 +1446,8 @@
           <code class="ruby">    when self.points &gt; 100</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="64">
-          
+        <li class="covered" data-hits="3" data-linenumber="64">
+          <span class="hits">3</span>
           
           <code class="ruby">      &quot;Craftsman&quot;</code>
         </li>
@@ -1482,8 +1458,8 @@
           <code class="ruby">    when self.points &gt; 10</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="66">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="66">
+          
           
           <code class="ruby">      &quot;Serf&quot;</code>
         </li>
@@ -1494,14 +1470,14 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="68">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="68">
+          <span class="hits">3</span>
           
           <code class="ruby">      &quot;Peasant&quot;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="69">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="20" data-linenumber="69">
+          <span class="hits">20</span>
           
           <code class="ruby">    end</code>
         </li>
@@ -1521,178 +1497,148 @@
         <li class="covered" data-hits="1" data-linenumber="72">
           <span class="hits">1</span>
           
-          <code class="ruby">  def update_points(points)</code>
+          <code class="ruby">  def self.reset_all_king</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="73">
           
           
-          <code class="ruby">    new_score = self.points + points</code>
+          <code class="ruby">    self.all.each do |user|</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="74">
           
           
-          <code class="ruby">    self.update(points: new_score)</code>
+          <code class="ruby">      user.king = false</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="75">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="76">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="77">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.reset_all_king</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="78">
-          
-          
-          <code class="ruby">    self.all.each do |user|</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="79">
-          
-          
-          <code class="ruby">      user.king = false</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="80">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="81">
-          
-          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="82">
+        <li class="never" data-hits="" data-linenumber="77">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="83">
+        <li class="covered" data-hits="1" data-linenumber="78">
           <span class="hits">1</span>
           
           <code class="ruby">  private</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="84">
+        <li class="covered" data-hits="1" data-linenumber="79">
           <span class="hits">1</span>
           
           <code class="ruby">    def self.update_overthrow_points_success</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="85">
+        <li class="missed" data-hits="0" data-linenumber="80">
           
           
           <code class="ruby">      Prompt.current.overthrows.each do |overthrow|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="86">
+        <li class="missed" data-hits="0" data-linenumber="81">
           
           
           <code class="ruby">        overthrow.subject.points += 25</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="87">
+        <li class="missed" data-hits="0" data-linenumber="82">
           
           
           <code class="ruby">        overthrow.subject.save</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="88">
+        <li class="never" data-hits="" data-linenumber="83">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="89">
+        <li class="never" data-hits="" data-linenumber="84">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="90">
+        <li class="never" data-hits="" data-linenumber="85">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="91">
+        <li class="covered" data-hits="1" data-linenumber="86">
           <span class="hits">1</span>
           
           <code class="ruby">    def self.update_overthrow_points_failure</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="92">
+        <li class="missed" data-hits="0" data-linenumber="87">
           
           
           <code class="ruby">      Prompt.current.overthrows.each do |overthrow|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="93">
+        <li class="missed" data-hits="0" data-linenumber="88">
           
           
           <code class="ruby">        overthrow.subject.points -= 100</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="94">
+        <li class="missed" data-hits="0" data-linenumber="89">
           
           
           <code class="ruby">        overthrow.subject.save</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="95">
+        <li class="never" data-hits="" data-linenumber="90">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="96">
+        <li class="never" data-hits="" data-linenumber="91">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="97">
+        <li class="never" data-hits="" data-linenumber="92">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="98">
+        <li class="never" data-hits="" data-linenumber="93">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="99">
+        <li class="never" data-hits="" data-linenumber="94">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="100">
+        <li class="never" data-hits="" data-linenumber="95">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="101">
+        <li class="never" data-hits="" data-linenumber="96">
           
           
           <code class="ruby">end</code>
@@ -3207,8 +3153,8 @@
     <h3>spec/factories.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3234,142 +3180,142 @@
           <code class="ruby">    subject_id &#39;1&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="3" data-linenumber="4">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    content {Faker::Hipster.sentence}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="7">
           
-          <code class="ruby">FactoryGirl.define do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
+          <code class="ruby">FactoryGirl.define do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
           <code class="ruby">  factory :user do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="9">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="24" data-linenumber="10">
+          <span class="hits">24</span>
           
           <code class="ruby">    id {rand(10..100)}</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="10">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="24" data-linenumber="11">
+          <span class="hits">24</span>
           
           <code class="ruby">    first_name {Faker::Name.first_name}</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="11">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="24" data-linenumber="12">
+          <span class="hits">24</span>
           
           <code class="ruby">    last_name {Faker::Name.last_name}</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="12">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="13">
+          <span class="hits">2</span>
           
           <code class="ruby">    points {rand(0..10000)}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby"> # t.string   &quot;content&quot;</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby"> #    t.integer  &quot;king_id&quot;</code>
+          <code class="ruby"> # t.string   &quot;content&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby"> #    t.boolean  &quot;current&quot;,            default: false</code>
+          <code class="ruby"> #    t.integer  &quot;king_id&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby"> #    t.boolean  &quot;pending&quot;,            default: true</code>
+          <code class="ruby"> #    t.boolean  &quot;current&quot;,            default: false</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby"> #    t.string   &quot;image_file_name&quot;</code>
+          <code class="ruby"> #    t.boolean  &quot;pending&quot;,            default: true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
-          <code class="ruby"> #    t.string   &quot;image_content_type&quot;</code>
+          <code class="ruby"> #    t.string   &quot;image_file_name&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby"> #    t.integer  &quot;image_file_size&quot;</code>
+          <code class="ruby"> #    t.string   &quot;image_content_type&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby"> #    t.datetime &quot;image_updated_at&quot;</code>
+          <code class="ruby"> #    t.integer  &quot;image_file_size&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby"> #    t.datetime &quot;created_at&quot;</code>
+          <code class="ruby"> #    t.datetime &quot;image_updated_at&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby"> #    t.datetime &quot;updated_at&quot;</code>
+          <code class="ruby"> #    t.datetime &quot;created_at&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby"></code>
+          <code class="ruby"> #    t.datetime &quot;updated_at&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
@@ -3387,49 +3333,49 @@
         <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby"># factory :user do</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
           
           
-          <code class="ruby">#   first_name &quot;Joe&quot;</code>
+          <code class="ruby"># factory :user do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="31">
           
           
-          <code class="ruby">#   last_name  &quot;Blow&quot;</code>
+          <code class="ruby">#   first_name &quot;Joe&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby">#   email { &quot;#{first_name}.#{last_name}@example.com&quot;.downcase }</code>
+          <code class="ruby">#   last_name  &quot;Blow&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby"># end</code>
+          <code class="ruby">#   email { &quot;#{first_name}.#{last_name}@example.com&quot;.downcase }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby"></code>
+          <code class="ruby"># end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
           
           
-          <code class="ruby"># create(:user, last_name: &quot;Doe&quot;).email</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
           
           
-          <code class="ruby"></code>
+          <code class="ruby"># create(:user, last_name: &quot;Doe&quot;).email</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
@@ -3441,136 +3387,142 @@
         <li class="never" data-hits="" data-linenumber="38">
           
           
-          <code class="ruby"># factory :user, aliases: [:author]</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
-          <code class="ruby"></code>
+          <code class="ruby"># factory :user, aliases: [:author]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
           
           
-          <code class="ruby"># factory :story do</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="41">
           
           
-          <code class="ruby">#   title &quot;My awesome story&quot;</code>
+          <code class="ruby"># factory :story do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
           
           
-          <code class="ruby">#   author</code>
+          <code class="ruby">#   title &quot;My awesome story&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">#   author</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
           
           
-          <code class="ruby">#   trait :published do</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="45">
           
           
-          <code class="ruby">#     published true</code>
+          <code class="ruby">#   trait :published do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="46">
           
           
-          <code class="ruby">#   end</code>
+          <code class="ruby">#     published true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">#   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="48">
           
           
-          <code class="ruby">#   trait :unpublished do</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">#     published false</code>
+          <code class="ruby">#   trait :unpublished do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="50">
           
           
-          <code class="ruby">#   end</code>
+          <code class="ruby">#     published false</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">#   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="52">
           
           
-          <code class="ruby">#   trait :week_long_publishing do</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="53">
           
           
-          <code class="ruby">#     start_at { 1.week.ago }</code>
+          <code class="ruby">#   trait :week_long_publishing do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="54">
           
           
-          <code class="ruby">#     end_at   { Time.now }</code>
+          <code class="ruby">#     start_at { 1.week.ago }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="55">
           
           
-          <code class="ruby">#   end</code>
+          <code class="ruby">#     end_at   { Time.now }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="56">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">#   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="57">
           
           
-          <code class="ruby">#   trait :month_long_publishing do</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="58">
           
           
-          <code class="ruby">#     start_at { 1.month.ago }</code>
+          <code class="ruby">#   trait :month_long_publishing do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="59">
           
           
-          <code class="ruby">#     end_at   { Time.now }</code>
+          <code class="ruby">#     start_at { 1.month.ago }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby">#     end_at   { Time.now }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
           
           
           <code class="ruby">#   end</code>
@@ -3585,8 +3537,8 @@
     <h3>spec/models/response_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>9</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3645,13 +3597,13 @@
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &#39;has a subject&#39; do </code>
+          <code class="ruby">  it &#39;has a subject&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">    resp = create(:response)</code>
+          <code class="ruby">    res = create(:response)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
@@ -3672,7 +3624,37 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;has content&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    res = create(:response)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(resp.subject_id).not_to eq(nil)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">end</code>
@@ -3685,11 +3667,11 @@
         <div class="source_table" id="0e41c768feecb097e08e4dfa489034a29ce3ed6d">
   <div class="header">
     <h3>spec/models/user_spec.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="green">92.42 %</span> covered</h4>
     <div>
-      <b>24</b> relevant lines. 
-      <span class="green"><b>24</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>66</b> relevant lines. 
+      <span class="green"><b>61</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
   
@@ -3714,232 +3696,232 @@
           <code class="ruby">describe User do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="4">
           
-          <code class="ruby">  khaleda_khan = User.create(</code>
+          
+          <code class="ruby">  # khaleda_khan = User.create(</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby">  first_name: &quot;Khaleda&quot;,</code>
+          <code class="ruby">  # first_name: &quot;Khaleda&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
           
           
-          <code class="ruby">  last_name: &quot;Khan&quot;,</code>
+          <code class="ruby">  # last_name: &quot;Khan&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">  points: 0</code>
+          <code class="ruby">  # points: 0</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">  )</code>
+          <code class="ruby">  # )</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="9">
           
-          <code class="ruby">  logan_gants = User.create(</code>
+          
+          <code class="ruby">  # logan_gants = User.create(</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">  first_name: &quot;Logan&quot;,</code>
+          <code class="ruby">  # first_name: &quot;Logan&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">  last_name: &quot;Gants&quot;,</code>
+          <code class="ruby">  # last_name: &quot;Gants&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">  king: true,</code>
+          <code class="ruby">  # king: true,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">  points: 50</code>
+          <code class="ruby">  # points: 50</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">  )</code>
+          <code class="ruby">  # )</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="15">
           
-          <code class="ruby">  ece_zalp = User.create(</code>
+          
+          <code class="ruby">  # ece_zalp = User.create(</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">  first_name: &quot;Ece&quot;,</code>
+          <code class="ruby">  # first_name: &quot;Ece&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby">  last_name: &quot;Zalp&quot;,</code>
+          <code class="ruby">  # last_name: &quot;Zalp&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby">  points: 150</code>
+          <code class="ruby">  # points: 150</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby">  )</code>
+          <code class="ruby">  # )</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="20">
           
-          <code class="ruby">  andrew_klein = User.create(</code>
+          
+          <code class="ruby">  # andrew_klein = User.create(</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
-          <code class="ruby">  first_name: &quot;Andrew&quot;,</code>
+          <code class="ruby">  # first_name: &quot;Andrew&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby">  last_name: &quot;Klein&quot;,</code>
+          <code class="ruby">  # last_name: &quot;Klein&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby">  points: 250</code>
+          <code class="ruby">  # points: 250</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby">  )</code>
+          <code class="ruby">  # )</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="26">
           
-          <code class="ruby">  khaleda_khan1 = User.create(</code>
+          
+          <code class="ruby">  # khaleda_khan1 = User.create(</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
           
           
-          <code class="ruby">  first_name: &quot;Khaleda1&quot;,</code>
+          <code class="ruby">  # first_name: &quot;Khaleda1&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="28">
           
           
-          <code class="ruby">  last_name: &quot;Khan1&quot;,</code>
+          <code class="ruby">  # last_name: &quot;Khan1&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby">  points: 0</code>
+          <code class="ruby">  # points: 0</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
           
           
-          <code class="ruby">  )</code>
+          <code class="ruby">  # )</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="31">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="32">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="32">
           
-          <code class="ruby">  ece_zalp1 = User.create(</code>
+          
+          <code class="ruby">  # ece_zalp1 = User.create(</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby">  first_name: &quot;Ece1&quot;,</code>
+          <code class="ruby">  # first_name: &quot;Ece1&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby">  last_name: &quot;Zalp&quot;,</code>
+          <code class="ruby">  # last_name: &quot;Zalp&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
           
           
-          <code class="ruby">  points: 12000</code>
+          <code class="ruby">  # points: 12000</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
           
           
-          <code class="ruby">  )</code>
+          <code class="ruby">  # )</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="37">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="37">
           
-          <code class="ruby">  andrew_klein1 = User.create(</code>
+          
+          <code class="ruby">  # andrew_klein1 = User.create(</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">
           
           
-          <code class="ruby">  first_name: &quot;Andrew1&quot;,</code>
+          <code class="ruby">  # first_name: &quot;Andrew1&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
-          <code class="ruby">  last_name: &quot;Klein1&quot;,</code>
+          <code class="ruby">  # last_name: &quot;Klein1&quot;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
           
           
-          <code class="ruby">  points: 11000</code>
+          <code class="ruby">  # points: 11000</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="41">
           
           
-          <code class="ruby">  )</code>
+          <code class="ruby">  # )</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
@@ -3963,7 +3945,7 @@
         <li class="covered" data-hits="1" data-linenumber="45">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &#39;it returns first name and last name with a space in between&#39; do</code>
+          <code class="ruby">  it &#39;returns first name and last name with a space in between&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="46">
@@ -3981,7 +3963,7 @@
         <li class="covered" data-hits="1" data-linenumber="48">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &quot;it returns first name and last initial&quot; do</code>
+          <code class="ruby">  it &quot;returns first name and last initial&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="49">
@@ -4008,349 +3990,595 @@
           <code class="ruby">    # User.reset_all_king</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="53">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="53">
           
-          <code class="ruby">    logan_gants.update(king:true)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(User.current_king).to eq(logan_gants)</code>
+          <code class="ruby">    logan_gants.update(king:true)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="missed" data-hits="0" data-linenumber="55">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    expect(User.current_king).to eq(logan_gants)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="56">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="57">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="57">
           
-          <code class="ruby">  it &#39;test factory girl. user should have id&#39; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="58">
           <span class="hits">1</span>
           
-          <code class="ruby">    user_1 = create(:user)</code>
+          <code class="ruby">  it &#39;test factory girl. user should have id&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
+          <code class="ruby">    user_1 = create(:user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="60">
+          <span class="hits">1</span>
+          
           <code class="ruby">    expect(user_1).to be_valid</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="60">
+        <li class="never" data-hits="" data-linenumber="61">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="61">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="62">
           
-          <code class="ruby">  it &quot;returns users rank&quot; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="62">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="63">
           
-          <code class="ruby">    user_2 = create(:user)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="63">
-          <span class="hits">1</span>
           
-          <code class="ruby">    user_2.update(points: 0)</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="64">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(user_2.check_rank).to eq(&#39;Peasant&#39;)</code>
+          <code class="ruby">  it &quot;returns Peasant rank&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="65">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(logan_gants.check_rank).to eq(&#39;Serf&#39;)</code>
+          <code class="ruby">    user_1 = create(:user,points: 0)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="66">
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    user_2 = create(:user,points: 10)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="67">
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    user_3 = create(:user, points: 5)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="68">
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">end</code>
+          <code class="ruby">    expect(user_1.check_rank).to eq(&#39;Peasant&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="69">
+        <li class="covered" data-hits="1" data-linenumber="69">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    expect(user_2.check_rank).to eq(&#39;Peasant&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="70">
+        <li class="covered" data-hits="1" data-linenumber="70">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    expect(user_3.check_rank).to eq(&#39;Peasant&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="71">
           
           
-          <code class="ruby"># def show</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="72">
+        <li class="covered" data-hits="1" data-linenumber="72">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#   @user = user</code>
+          <code class="ruby">  it &quot;returns Serf rank&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="73">
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"># end</code>
+          <code class="ruby">    user_1 = create(:user,points: 11)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="74">
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#</code>
+          <code class="ruby">    user_2 = create(:user,points: 20)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="missed" data-hits="0" data-linenumber="75">
           
           
-          <code class="ruby"># def check_rank</code>
+          <code class="ruby">    user_3 = create(:user, points: 100)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="missed" data-hits="0" data-linenumber="76">
           
           
-          <code class="ruby">#   case</code>
+          <code class="ruby">    expect(user_1.check_rank).to eq(&#39;Serf&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="missed" data-hits="0" data-linenumber="77">
           
           
-          <code class="ruby">#   when self.points &gt; 100000</code>
+          <code class="ruby">    expect(user_2.check_rank).to eq(&#39;Serf&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="78">
+        <li class="missed" data-hits="0" data-linenumber="78">
           
           
-          <code class="ruby">#     &quot;Monarch&quot;</code>
+          <code class="ruby">    expect(user_3.check_rank).to eq(&#39;Serf&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="79">
           
           
-          <code class="ruby">#   when self.points &gt; 10000</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="covered" data-hits="1" data-linenumber="80">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#     &quot;Noble&quot;</code>
+          <code class="ruby">    it &quot;returns Craftsman rank&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="81">
+        <li class="covered" data-hits="1" data-linenumber="81">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#   when self.points &gt; 1000</code>
+          <code class="ruby">      user_1 = create(:user,points: 101)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="82">
+        <li class="covered" data-hits="1" data-linenumber="82">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#     &quot;Knight&quot;</code>
+          <code class="ruby">      user_2 = create(:user,points: 120)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="83">
+        <li class="covered" data-hits="1" data-linenumber="83">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#   when self.points &gt; 500</code>
+          <code class="ruby">      user_3 = create(:user, points: 250)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="84">
+        <li class="covered" data-hits="1" data-linenumber="84">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#     &quot;Vassal&quot;</code>
+          <code class="ruby">      expect(user_1.check_rank).to eq(&#39;Craftsman&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="85">
+        <li class="covered" data-hits="1" data-linenumber="85">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#   when self.points &gt; 250</code>
+          <code class="ruby">      expect(user_2.check_rank).to eq(&#39;Craftsman&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="86">
+        <li class="covered" data-hits="1" data-linenumber="86">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#     &quot;Merchant&quot;</code>
+          <code class="ruby">      expect(user_3.check_rank).to eq(&#39;Craftsman&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="87">
           
           
-          <code class="ruby">#   when self.points &gt; 100</code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="88">
+        <li class="covered" data-hits="1" data-linenumber="88">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#     &quot;Craftsman&quot;</code>
+          <code class="ruby">    it &quot;returns Merchant rank&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="89">
+        <li class="covered" data-hits="1" data-linenumber="89">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#   when self.points &gt; 10</code>
+          <code class="ruby">      user_1 = create(:user,points: 251)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="90">
+        <li class="covered" data-hits="1" data-linenumber="90">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#     &quot;Serf&quot;</code>
+          <code class="ruby">      user_2 = create(:user,points: 300)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="91">
+        <li class="covered" data-hits="1" data-linenumber="91">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#   else</code>
+          <code class="ruby">      user_3 = create(:user, points: 500)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="92">
+        <li class="covered" data-hits="1" data-linenumber="92">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#     &quot;Peasant&quot;</code>
+          <code class="ruby">      expect(user_1.check_rank).to eq(&#39;Merchant&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="93">
+        <li class="covered" data-hits="1" data-linenumber="93">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#   end</code>
+          <code class="ruby">      expect(user_2.check_rank).to eq(&#39;Merchant&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="94">
+        <li class="covered" data-hits="1" data-linenumber="94">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"># end</code>
+          <code class="ruby">      expect(user_3.check_rank).to eq(&#39;Merchant&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="95">
           
           
-          <code class="ruby">#</code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="96">
+        <li class="covered" data-hits="1" data-linenumber="96">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#</code>
+          <code class="ruby">    it &quot;returns Vassal rank&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="97">
+        <li class="covered" data-hits="1" data-linenumber="97">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"># private</code>
+          <code class="ruby">      user_1 = create(:user,points: 501)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="98">
+        <li class="covered" data-hits="1" data-linenumber="98">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#   def self.update_overthrow_points_success</code>
+          <code class="ruby">      user_2 = create(:user,points: 600)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="99">
+        <li class="covered" data-hits="1" data-linenumber="99">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#     Prompt.current.overthrows.each do |overthrow|</code>
+          <code class="ruby">      user_3 = create(:user, points: 1000)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="100">
+        <li class="covered" data-hits="1" data-linenumber="100">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#       overthrow.subject.points += 25</code>
+          <code class="ruby">      expect(user_1.check_rank).to eq(&#39;Vassal&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="101">
+        <li class="covered" data-hits="1" data-linenumber="101">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#       overthrow.subject.save</code>
+          <code class="ruby">      expect(user_2.check_rank).to eq(&#39;Vassal&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="102">
+        <li class="covered" data-hits="1" data-linenumber="102">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#     end</code>
+          <code class="ruby">      expect(user_3.check_rank).to eq(&#39;Vassal&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="103">
           
           
-          <code class="ruby">#   end</code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="104">
+        <li class="covered" data-hits="1" data-linenumber="104">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns Knight rank&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="105">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      user_1 = create(:user,points: 1001)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="106">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      user_2 = create(:user,points: 3000)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="107">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      user_3 = create(:user, points: 10000)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="108">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(user_1.check_rank).to eq(&#39;Knight&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="109">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(user_2.check_rank).to eq(&#39;Knight&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="110">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(user_3.check_rank).to eq(&#39;Knight&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="111">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="112">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns Noble rank&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="113">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      user_1 = create(:user,points: 10001)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="114">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      user_2 = create(:user,points: 30000)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="115">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      user_3 = create(:user, points: 100000)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="116">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(user_1.check_rank).to eq(&#39;Noble&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="117">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(user_2.check_rank).to eq(&#39;Noble&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="118">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(user_3.check_rank).to eq(&#39;Noble&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="119">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="120">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns Monarch rank&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="121">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      user_1 = create(:user,points: 100001)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="122">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      user_2 = create(:user,points: 300000)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="123">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(user_1.check_rank).to eq(&#39;Monarch&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="124">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(user_2.check_rank).to eq(&#39;Monarch&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="125">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="126">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="127">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="128">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="129">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="130">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="131">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="132">
+          
+          
+          <code class="ruby"># def show</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="133">
+          
+          
+          <code class="ruby">#   @user = user</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="134">
+          
+          
+          <code class="ruby"># end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="135">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="136">
           
           
           <code class="ruby">#</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="105">
+        <li class="never" data-hits="" data-linenumber="137">
           
           
-          <code class="ruby">#   def self.update_overthrow_points_failure</code>
+          <code class="ruby">#</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="106">
+        <li class="never" data-hits="" data-linenumber="138">
+          
+          
+          <code class="ruby"># private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="139">
+          
+          
+          <code class="ruby">#   def self.update_overthrow_points_success</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="140">
           
           
           <code class="ruby">#     Prompt.current.overthrows.each do |overthrow|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="107">
+        <li class="never" data-hits="" data-linenumber="141">
           
           
-          <code class="ruby">#       overthrow.subject.points -= 100</code>
+          <code class="ruby">#       overthrow.subject.points += 25</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="108">
+        <li class="never" data-hits="" data-linenumber="142">
           
           
           <code class="ruby">#       overthrow.subject.save</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="109">
+        <li class="never" data-hits="" data-linenumber="143">
           
           
           <code class="ruby">#     end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="110">
+        <li class="never" data-hits="" data-linenumber="144">
+          
+          
+          <code class="ruby">#   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="145">
+          
+          
+          <code class="ruby">#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="146">
+          
+          
+          <code class="ruby">#   def self.update_overthrow_points_failure</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="147">
+          
+          
+          <code class="ruby">#     Prompt.current.overthrows.each do |overthrow|</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="148">
+          
+          
+          <code class="ruby">#       overthrow.subject.points -= 100</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="149">
+          
+          
+          <code class="ruby">#       overthrow.subject.save</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="150">
+          
+          
+          <code class="ruby">#     end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="151">
           
           
           <code class="ruby">#   end</code>
