@@ -49,7 +49,8 @@ describe User do
     expect(khaleda_khan.abbreviated_full_name).to eq("Khaleda K.")
   end
   it "returns the current king" do
-    User.reset_all_king
+    # User.reset_all_king
+    binding.pry
     logan_gants.update(king:true)
     expect(User.current_king).to eq(logan_gants)
   end
@@ -57,6 +58,12 @@ describe User do
   it 'test factory girl. user should have id' do
     user_1 = create(:user)
     expect(user_1).to be_valid
+  end
+  it "returns users rank" do
+    user_2 = create(:user)
+    user_2.update(points: 0)
+    expect(user_2.check_rank).to eq('Peasant')
+    expect(logan_gants.check_rank).to eq('Serf')
   end
 
 end
