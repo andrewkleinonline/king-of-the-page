@@ -7,6 +7,9 @@ end
 FactoryGirl.define do
   factory :user do
     id {rand(10..100)}
+    first_name {Faker::Name.first_name}
+    last_name {Faker::Name.last_name}
+    points {rand(0..10000)}
   end
 end
 
