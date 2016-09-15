@@ -20,7 +20,7 @@ banana.decrees.create(content: "If you could have any superpower, what would it 
 logan.responses.create(content: "hummunah hummunah")
 Prompt.current.responses << logan.responses.first
 
-logan.responses.create(content: "drummunah drummunah")
+gretchen.responses.create(content: "drummunah drummunah")
 Prompt.current.responses << gretchen.responses.first
 
 
