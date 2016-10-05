@@ -1,7 +1,8 @@
 FactoryGirl.define do
  factory :response do
-    subject_id '1'
+    subject_id {rand(1..100)}
     content {Faker::Hipster.sentence}
+    prompt_id '1'
   end
 end
 
@@ -13,6 +14,15 @@ FactoryGirl.define do
     points {rand(0..10000)}
   end
 end
+
+FactoryGirl.define do 
+  factory :vote do
+    subject_id '2'
+    response_id '1'
+  end
+end
+
+
 
  # t.string   "content"
  #    t.integer  "king_id"

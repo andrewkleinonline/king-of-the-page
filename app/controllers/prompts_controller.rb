@@ -8,9 +8,7 @@ class PromptsController < ApplicationController
       redirect_to root_path
     end
     @prompt = Prompt.new
-
   end
-
 
   def create
     @prompt = Prompt.create(prompt_params)
